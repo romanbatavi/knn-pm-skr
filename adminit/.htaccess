@@ -1,0 +1,69 @@
+Options -Indexes
+RewriteRule ^/?$ index.php [NC,L]
+RewriteRule ^admin?$ usradmin.php [NC,L]
+RewriteRule ^pelatih?$ usrpelatih.php [NC,L]
+RewriteRule ^peserta?$ usrpeserta.php [NC,L]
+RewriteRule ^nilai?$ datanilai.php [NC,L]
+RewriteRule ^hasilnilai?$ datahasilnilai.php [NC,L]
+RewriteRule ^kriteria1?$ kriteria1.php [NC,L]
+RewriteRule ^penilaian1?$ penilaian1.php [NC,L]
+RewriteRule ^perangkingan?$ perangkingan.php [NC,L]
+RewriteRule ^perangkingan2?$ perangkingan2.php [NC,L]
+RewriteRule ^perangkingan3?$ perangkingan3.php [NC,L]
+RewriteRule ^hasilmfep?$ hasilmfep.php [NC,L]
+RewriteRule ^hasilmfep2?$ hasilmfep2.php [NC,L]
+
+
+
+
+
+
+
+
+
+
+
+RewriteRule ^siswa?$ siswa.php [NC,L]
+RewriteRule ^ekskul?$ ekskul.php [NC,L]
+RewriteRule ^pengguna?$ pengguna.php [NC,L]
+RewriteRule ^laporan?$ laporan.php [NC,L]
+RewriteRule ^pekskul?$ pendaftaran.php [NC,L]
+RewriteRule ^tambahs?$ tambahsiswa.php [NC,L]
+RewriteRule ^tambahe?$ tambahekskul.php [NC,L]
+RewriteRule ^tambahp?$ tambahpengguna.php [NC,L]
+RewriteRule ^tambahl?$ tambahlaporan.php [NC,L]
+RewriteRule ^logout?$ ./../logout.php [NC,L]
+RewriteRule ^event?$ event.php [NC,L]
+RewriteRule ^kejuaraan?$ kejuaraan.php [NC,L]
+RewriteRule ^kegiatan?$ kegiatan.php [NC,L]
+RewriteRule ^tambahev?$ tambahevent.php [NC,L]
+RewriteRule ^tambahkej?$ tambahkejuaraan.php [NC,L]
+RewriteRule ^lappersiswa?$ laporanpersiswa.php [NC,L]
+
+
+
+
+
+
+RewriteRule  ^hsiswa/?([^'.,?*&^%$#@!/]+)$       hapus/hsiswa.php?&id_siswa=$1       [NC,L]
+RewriteRule  ^huser/?([^'.,?*&^%$#@!/]+)$       hapus/huser.php?&id_user=$1       [NC,L]
+RewriteRule  ^hekskul/?([^'.,?*&^%$#@!/]+)$       hapus/hekskul.php?&id_ekskul=$1       [NC,L]
+
+
+RewriteRule  ^siswa/?([^'.,?*&^%$#@!/]+)$       edit_siswa.php?&id_siswa=$1       [NC,L]
+RewriteRule  ^ekskul/?([^'.,?*&^%$#@!/]+)$       edit_ekskul.php?&id_jurusan=$1       [NC,L]
+RewriteRule  ^pengguna/?([^'.,?*&^%$#@!/]+)$       edit_pengguna.php?&id_lowongan=$1       [NC,L]
+RewriteRule  ^event/?([^'.,?*&^%$#@!/]+)$       eventdet.php?&id_event=$1       [NC,L]
+
+
+
+
+
+
+RewriteRule  ^profile/?([^'.,?*&^%$#@!/]+)$       profile.php?id=$1       [NC,L]
+RewriteRule  ^user/?([^'.,?*&^%$#@!/]+)$       euser.php?id=$1       [NC,L]
+RewriteRule  ^profileedit/?([^'.,?*&^%$#@!/]+)$       prosesedit/profileedit.php?id=$1       [NC,L]
+RewriteRule ^cetak_barang?$ lap_barang.php [NC,L]
+
+
+
