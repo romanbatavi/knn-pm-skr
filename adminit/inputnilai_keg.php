@@ -3,7 +3,7 @@
 		<div class="col-12">
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Tambah Data kegiatan </h3>
+					<h3 class="portlet-title">Tambah Data kegiatan</h3>
 					</div>
 					<div class="portlet-body">
                         <!-- <p>
@@ -40,25 +40,17 @@
                 </div>
             </div>
 
-            <!-- Ilmu Pengetahuan Sosial -->
+            <!-- Organisasi Sosial-->
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">organisasi sosial</label>
+                        <label class="col-sm-6 col-form-label font-weight-bold">Organisasi Sosial</label>
                         <div class="col-sm-6">
                             <!-- <input type="number" class="form-control" name="nilai_orgs" id="nilai_orgs" required> -->
                                 <select class="form-control" name="nilai_orgs" id="nilai_orgs" required>
                                     <option value="">--Pilih Nilai--</option>
-                                    <option value="10">A</option>
-                                    <option value="9">A-</option>
-                                    <option value="8">B+</option>
-                                    <option value="7">B</option>
-                                    <option value="6">B-</option>
-                                    <option value="5">C+</option>
-                                    <option value="4">C</option>
-                                    <option value="3">C-</option>
-                                    <option value="2">D</option>
-                                    <option value="1">E</option>
+                                    <option value="2">Ya</option>
+                                    <option value="1">Tidak</option>
                                 </select>
                         </div>
                     </div>
@@ -73,7 +65,7 @@
 								<?php
                                     require_once "database.php";
                                     $db  = new database();
-                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='IPS'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
+                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='ORGS'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
                                     ?>
                             </select>
                         </div>
@@ -98,8 +90,9 @@
                     </div>
                 </div>
             </div>
-            <!-- Ilmu Pengetahuan Sosial -->
-            <!-- Ilmu Pengetahuan Alam	 -->
+            <!-- Organisasi Sosial-->
+
+            <!-- Organisasi Keagamaan -->
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group row">
@@ -108,16 +101,8 @@
                             <!-- <input type="number" class="form-control" name="nilai_orgkg" id="nilai_orgkg" required> -->
 								<select class="form-control" name="nilai_orgkg" id="nilai_orgkg" required>
 									<option value="">--Pilih Nilai--</option>
-									<option value="10">A</option>
-                                    <option value="9">A-</option>
-                                    <option value="8">B+</option>
-                                    <option value="7">B</option>
-                                    <option value="6">B-</option>
-                                    <option value="5">C+</option>
-                                    <option value="4">C</option>
-                                    <option value="3">C-</option>
-                                    <option value="2">D</option>
-                                    <option value="1">E</option>
+									<option value="2">Ya</option>
+                                    <option value="1">Tidak</option>
 								</select>
                         </div>
                     </div>
@@ -132,7 +117,7 @@
 								<?php
                                     require_once "database.php";
                                     $db  = new database();
-                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='IPA'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
+                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='ORGK'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
                                     ?>
                             </select>
                         </div>
@@ -158,7 +143,8 @@
                 </div>
             </div>
             <!-- Ilmu Pengetahuan Alam	 -->
-            <!-- Pendidikan Kewarganegaraan -->
+
+            <!-- Organisasi PMI -->
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group row">
@@ -167,16 +153,8 @@
                             <!-- <input type="number" class="form-control" name="nilai_orgpmi" id="nilai_orgpmi" required> -->
 							<select class="form-control" name="nilai_orgpmi" id="nilai_orgpmi" required>
 								<option value="">--Pilih Nilai--</option>
-								<option value="10">A</option>
-                                    <option value="9">A-</option>
-                                    <option value="8">B+</option>
-                                    <option value="7">B</option>
-                                    <option value="6">B-</option>
-                                    <option value="5">C+</option>
-                                    <option value="4">C</option>
-                                    <option value="3">C-</option>
-                                    <option value="2">D</option>
-                                    <option value="1">E</option>
+                                    <option value="2">Ya</option>
+                                    <option value="1">Tidak</option>
 							</select>
                         </div>
                     </div>
@@ -216,8 +194,9 @@
                     </div>
                 </div>
             </div>
-            <!-- Pendidikan Kewarganegaraan -->
-            <!-- Bahasa Indonesia -->
+            <!-- Organisasi PMI -->
+
+            <!-- Organisasi Osis -->
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group row">
@@ -226,18 +205,9 @@
                             <!-- <input type="number" class="form-control" name="nilai_osis" id="nilai_osis" required> -->
 							<select class="form-control" name="nilai_osis" id="nilai_osis" required>
 								<option value="">--Pilih Nilai--</option>
-								<option value="10">A</option>
-                                    <option value="9">A-</option>
-                                    <option value="8">B+</option>
-                                    <option value="7">B</option>
-                                    <option value="6">B-</option>
-                                    <option value="5">C+</option>
-                                    <option value="4">C</option>
-                                    <option value="3">C-</option>
-                                    <option value="2">D</option>
-                                    <option value="1">E</option>
+                                    <option value="2">Ya</option>
+                                    <option value="1">Tidak</option>
 							</select>
-
                         </div>
                     </div>
                 </div>
@@ -251,7 +221,7 @@
 								<?php
                                     require_once "database.php";
                                     $db  = new database();
-                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='BIND'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
+                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='OSIS'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
                                     ?>
                             </select>
                         </div>
@@ -276,8 +246,9 @@
                     </div>
                 </div>
             </div>
-            <!-- Bahasa Indonesia -->
         </div>
+        <!-- Organisasi Osis -->
+
         <div class="row">
                 <div class="col-md-4">
                     <div class="form-group row">

@@ -8,7 +8,7 @@
  */
  
  # rubahlah sesuai alamat website kamu
- $url    = 'http://localhost:27/revisi_roman/';
+ $url    = 'http://localhost:/revisi_roman/';
 
  # host untuk database, biasanya 'localhost'
  $dbhost = 'localhost';
