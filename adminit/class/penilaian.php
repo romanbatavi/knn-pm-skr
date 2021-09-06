@@ -24,7 +24,6 @@ class penilaian {
 					<th width="12%">Bahasa Inggris</th>
 					<th width="12%">Pend Agama Islam</th>
 					<th width="12%">Aksi</th>
-
 				</tr>
 			</thead>
 
@@ -254,6 +253,7 @@ class penilaian {
 
 					echo '
 					</tbody>
+					
 					<tfoot>
 						<tr align="center">
 							<th colspan="2">Jenis Factor</th>

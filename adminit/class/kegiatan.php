@@ -201,6 +201,7 @@ class kegiatan {
 						<tr align="center">
 							<th colspan="2">Jenis Factor</th>
 							<th>'.$jenis_sec.'</th>
+							<th>'.$jenis_sec.'</th>
 							<th>'.$jenis_core.'</th>
 							<th>'.$jenis_core.'</th>
 						</tr>

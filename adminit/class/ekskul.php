@@ -108,12 +108,12 @@ class ekskul {
 		<table class="table table-bordered" width="100%" cellspacing="0">
             <thead class="bg-info text-white">
                 <tr align="center">
-					<th width="5%">No</th>
-					<th width="20%">Nama Siswa</th>
-					<th width="15%">futsal</th>
-			<th width="15%">PRM</th>
-			<th width="15%">basket</th>
-			<th width="15%">paskibra</th>
+				<th width="5%">No</th>
+				<th width="20%">Nama Siswa</th>
+				<th width="15%">Futsal</th>
+				<th width="15%">Pamuka</th>
+				<th width="15%">Basket</th>
+				<th width="15%">Paskibra</th>
 				</tr>
 			</thead>
 
@@ -151,15 +151,15 @@ class ekskul {
 		<table class="table table-bordered" width="100%" cellspacing="0">
             <thead class="bg-info text-white">
                 <tr align="center">
-					<th width="5%">No</th>
-					<th width="18%">Nama Siswa</th>
-					<th width="15%">futsal</th>
-			<th width="15%">PRM</th>
-			<th width="15%">basket</th>
-			<th width="15%">paskibra</th>
-					<th width="7%">Nilai CF (70%)</th>
-					<th width="7%">Nilai SF (30%)</th>
-					<th width="7%">Nilai Total</th>
+				<th width="5%">No</th>
+				<th width="18%">Nama Siswa</th>
+				<th width="15%">Futsal</th>
+				<th	th width="15%">Pramuka</th>
+				<th width="15%">Basket</th>
+				<th width="15%">Paskibra</th>
+				<th width="7%">Nilai CF (70%)</th>
+				<th width="7%">Nilai SF (30%)</th>
+				<th width="7%">Nilai Total</th>
 				</tr>
 			</thead>
 
@@ -196,6 +196,7 @@ class ekskul {
 							<th colspan="2">Jenis Factor</th>
 							<th>'.$jenis_sec.'</th>
 							<th>'.$jenis_core.'</th>
+							<th>'.$jenis_sec.'</th>
 							<th>'.$jenis_core.'</th>
 						</tr>
 					</tfoot>

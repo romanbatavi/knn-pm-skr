@@ -24,7 +24,6 @@ class penilaian {
 					<th width="12%">Bahasa Inggris</th>
 					<th width="12%">Pend Agama Islam</th>
 					<th width="12%">Aksi</th>
-
 				</tr>
 			</thead>
 

@@ -52,7 +52,7 @@
                                     <option value="4">Tingkat Internasional</option>
                                     <option value="3">Tingkat Nasional</option>
                                     <option value="2">Tingkat Provinsi</option>
-                                    <option value="1">Tingkat Kecamatan</option>
+                                    <option value="1">Tidak Ada</option>
                                 </select>
                         </div>
                     </div>
@@ -106,7 +106,7 @@
 									<option value="4">Tingkat Internasional</option>
                                     <option value="3">Tingkat Nasional</option>
                                     <option value="2">Tingkat Provinsi</option>
-                                    <option value="1">Tingkat Kecamatan</option>
+                                    <option value="1">Tidak Ada</option>
 								</select>
                         </div>
                     </div>
