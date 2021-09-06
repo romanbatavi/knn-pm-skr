@@ -243,9 +243,9 @@ $prestasi = new prestasi();
       <th width="22%">Nilai Penilaian<br/> <?php echo $persen; ?> %</th>
       <th width="18%">Nilai Kemampuan <br/> <?php echo $persen2; ?> %</th>
       <th width="18%">Nilai Kegiatan <br/> <?php echo $persen3; ?> %</th>
-      <th width="18%">Nilai Kegiatan <br/> <?php echo $persen4; ?> %</th>
-      <th width="18%">Nilai Kegiatan <br/> <?php echo $persen5; ?> %</th>
-      <th width="18%">Nilai Kegiatan <br/> <?php echo $persen6; ?> %</th>
+      <th width="18%">Nilai Ekstrakulikuler <br/> <?php echo $persen4; ?> %</th>
+      <th width="18%">Nilai Sikap <br/> <?php echo $persen5; ?> %</th>
+      <th width="18%">Nilai Prestasi <br/> <?php echo $persen6; ?> %</th>
 			<th width="10%">Total</th>
       <th width="15%">Ranking</th>
     </tr> 

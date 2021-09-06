@@ -52,7 +52,7 @@ unset($atribut[$TARGET]);
             <?php
             foreach ($atribut as $key => $val) : ?>
                 <div class="form-group">
-                    <label class="col-sm-3 control-label"><?= $val->nama_atribut ?> <span class="text-danger">* dwiki</span></label>
+                    <label class="col-sm-3 control-label"><?= $val->nama_atribut ?> <span class="text-danger">*</span></label>
                     <div class="col-sm-9">
                         <?php if ($ATRIBUT_NILAI[$key]) : ?>
                             <select class="form-control" name="nilai[<?= $key ?>]">
