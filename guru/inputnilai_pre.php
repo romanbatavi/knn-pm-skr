@@ -3,7 +3,7 @@
 		<div class="col-12">
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Tambah Data kegiatan </h3>
+					<h3 class="portlet-title">Tambah Data kegiatan</h3>
 					</div>
 					<div class="portlet-body">
                         <!-- <p>
@@ -40,7 +40,7 @@
                 </div>
             </div>
 
-            <!-- Ilmu Pengetahuan Sosial -->
+            <!-- Akademik -->
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group row">
@@ -49,16 +49,10 @@
                             <!-- <input type="number" class="form-control" name="nilai_akdm" id="nilai_akdm" required> -->
                                 <select class="form-control" name="nilai_akdm" id="nilai_akdm" required>
                                     <option value="">--Pilih Nilai--</option>
-                                    <option value="10">A</option>
-                                    <option value="9">A-</option>
-                                    <option value="8">B+</option>
-                                    <option value="7">B</option>
-                                    <option value="6">B-</option>
-                                    <option value="5">C+</option>
-                                    <option value="4">C</option>
-                                    <option value="3">C-</option>
-                                    <option value="2">D</option>
-                                    <option value="1">E</option>
+                                    <option value="10">Tingkat Internasional</option>
+                                    <option value="9">Tingkat Nasional</option>
+                                    <option value="8">Tingkat Provinsi</option>
+                                    <option value="7">Tingkat Kecamatan</option>
                                 </select>
                         </div>
                     </div>
@@ -98,8 +92,9 @@
                     </div>
                 </div>
             </div>
-            <!-- Ilmu Pengetahuan Sosial -->
-            <!-- Ilmu Pengetahuan Alam	 -->
+            <!--Akademik-->
+
+            <!--Non Akademik-->
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group row">
@@ -108,16 +103,10 @@
                             <!-- <input type="number" class="form-control" name="nilai_nakdm" id="nilai_nakdm" required> -->
 								<select class="form-control" name="nilai_nakdm" id="nilai_nakdm" required>
 									<option value="">--Pilih Nilai--</option>
-									<option value="10">A</option>
-                                    <option value="9">A-</option>
-                                    <option value="8">B+</option>
-                                    <option value="7">B</option>
-                                    <option value="6">B-</option>
-                                    <option value="5">C+</option>
-                                    <option value="4">C</option>
-                                    <option value="3">C-</option>
-                                    <option value="2">D</option>
-                                    <option value="1">E</option>
+									<option value="10">Tingkat Internasional</option>
+                                    <option value="9">Tingkat Nasional</option>
+                                    <option value="8">Tingkat Provinsi</option>
+                                    <option value="7">Tingkat Kecamatan</option>
 								</select>
                         </div>
                     </div>
@@ -157,7 +146,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Ilmu Pengetahuan Alam	 -->
+            <!-- Non Akademik -->
         </div>
         <div class="row">
                 <div class="col-md-4">
@@ -188,7 +177,7 @@
                 </div>
         </div>
         
-        <div class="card-footer text-left">
+        <!-- <div class="card-footer text-left">
             <h6 class="m-0 font-weight-bold text-danger">Keterangan Rasio Nilai :</h6>
             <h6 class="m-0 font-weight-bold text-info">- Nilai A = 90 - 100</h6>
             <h6 class="m-0 font-weight-bold text-info">- Nilai A- = 80 - 89</h6>
@@ -200,7 +189,7 @@
             <h6 class="m-0 font-weight-bold text-info">- Nilai C- = 55 - 59</h6>
             <h6 class="m-0 font-weight-bold text-info">- Nilai D = 50 - 54</h6>
             <h6 class="m-0 font-weight-bold text-info">- Nilai E = Nilai < 50</h6>
-        </div>
+        </div> -->
         <div class="card-footer text-right">
             <button name="simpan" type="submit" class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
             <button type="reset" class="btn btn-info"><i class="fa fa-sync-alt"></i> Reset</button>

@@ -44,7 +44,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">organisasi sosial</label>
+                        <label class="col-sm-6 col-form-label font-weight-bold">Organisasi Sosial</label>
                         <div class="col-sm-6">
                             <!-- <input type="number" class="form-control" name="nilai_orgs" id="nilai_orgs" required> -->
                                 <select class="form-control" name="nilai_orgs" id="nilai_orgs" required>

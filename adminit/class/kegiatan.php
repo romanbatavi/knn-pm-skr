@@ -16,7 +16,7 @@ class kegiatan {
                 <tr align="center">
 					<th width="5%">No</th>
 					<th width="20%">Nama Siswa</th>
-					<th width="15%">Organisasi SOSIAL</th>
+					<th width="15%">Organisasi Sosial</th>
 					<th width="15%">Organisasi Keagamaan</th>
 					<th width="15%">Organisasi PMI</th>
 					<th width="15%">Organisasi OSIS</th>
@@ -114,7 +114,7 @@ class kegiatan {
 			<tr align="center">
 			<th width="5%">No</th>
 			<th width="20%">Nama Siswa</th>
-			<th width="15%">Organisasi SOSIAL</th>
+			<th width="15%">Organisasi Sosial</th>
 			<th width="15%">Organisasi Keagamaan</th>
 			<th width="15%">Organisasi PMI</th>
 			<th width="15%">Organisasi OSIS</th>
@@ -157,15 +157,15 @@ class kegiatan {
 		<table class="table table-bordered" width="100%" cellspacing="0">
             <thead class="bg-info text-white">
                 <tr align="center">
-					<th width="5%">No</th>
-					<th width="18%">Nama Siswa</th>
-					<th width="15%">Organisasi SOSIAL</th>
-			<th width="15%">Organisasi Keagamaan</th>
-			<th width="15%">Organisasi PMI</th>
-			<th width="15%">Organisasi OSIS</th>
-					<th width="7%">Nilai CF (60%)</th>
-					<th width="7%">Nilai SF (40%)</th>
-					<th width="7%">Nilai Total</th>
+				<th width="5%">No</th>
+				<th width="18%">Nama Siswa</th>
+				<th width="15%">Organisasi Sosial</th>
+				<th width="15%">Organisasi Keagamaan</th>
+				<th width="15%">Organisasi PMI</th>
+				<th width="15%">Organisasi OSIS</th>
+				<th width="7%">Nilai CF (60%)</th>
+				<th width="7%">Nilai SF (40%)</th>
+				<th width="7%">Nilai Total</th>
 				</tr>
 			</thead>
 
