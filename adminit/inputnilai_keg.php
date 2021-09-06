@@ -169,7 +169,7 @@
 								<?php
                                     require_once "database.php";
                                     $db  = new database();
-                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='PKN'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
+                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='ORGP'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
                                     ?>
                             </select>
                         </div>
@@ -353,14 +353,14 @@
         document.getElementById("selisih_osis").value = s;
         document.getElementById("nilai_bobot_osis").value = nb;
 
-        var ips = document.getElementById("nilai_bobot_orgs").value;
-        var ipa = document.getElementById("nilai_bobot_orgkg").value;
-        var pkn = document.getElementById("nilai_bobot_orgpmi").value;
-        var bind = document.getElementById("nilai_bobot_osis").value;
+        var sosial = document.getElementById("nilai_bobot_orgs").value;
+        var keagamaan = document.getElementById("nilai_bobot_orgkg").value;
+        var pmi = document.getElementById("nilai_bobot_orgpmi").value;
+        var osis = document.getElementById("nilai_bobot_osis").value;
 
-        var cf = (parseFloat(ips) + parseFloat(ipa)) / 2;
-        var sf = (parseFloat(pkn) + parseFloat(bind)) / 2;
-        var nt = (cf * 0.5) + (sf * 0.5);
+        var cf = (parseFloat(osis) + parseFloat(pmi)) / 2;
+        var sf = (parseFloat(sosial) + parseFloat(keagamaan)) / 2;
+        var nt = (cf * 0.6) + (sf * 0.4);
 
         document.getElementById("nilai_cf_A3").value  = cf;
         document.getElementById("nilai_sf_A3").value  = sf;

@@ -40,7 +40,7 @@
                 </div>
             </div>
 
-            <!-- Ilmu Pengetahuan Sosial -->
+            <!-- Pramuka -->
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group row">
@@ -49,13 +49,8 @@
                             <!-- <input type="number" class="form-control" name="nilai_prm" id="nilai_prm" required> -->
                                 <select class="form-control" name="nilai_prm" id="nilai_prm" required>
                                     <option value="">--Pilih Nilai--</option>
-                                    <option value="10">A</option>
-                                    <option value="9">A-</option>
-                                    <option value="8">B+</option>
-                                    <option value="7">B</option>
-                                    <option value="6">B-</option>
-                                    <option value="5">C+</option>
-                                    
+                                    <option value="2">Ya</option>
+                                    <option value="1">Tidak</option>
                                 </select>
                         </div>
                     </div>
@@ -95,8 +90,9 @@
                     </div>
                 </div>
             </div>
-            <!-- Ilmu Pengetahuan Sosial -->
-            <!-- Ilmu Pengetahuan Alam	 -->
+            <!-- Pramuka -->
+
+            <!-- Futsal-->
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group row">
@@ -105,16 +101,8 @@
                             <!-- <input type="number" class="form-control" name="nilai_fsl" id="nilai_fsl" required> -->
 								<select class="form-control" name="nilai_fsl" id="nilai_fsl" required>
 									<option value="">--Pilih Nilai--</option>
-									<option value="10">A</option>
-                                    <option value="9">A-</option>
-                                    <option value="8">B+</option>
-                                    <option value="7">B</option>
-                                    <option value="6">B-</option>
-                                    <option value="5">C+</option>
-                                    <option value="4">C</option>
-                                    <option value="3">C-</option>
-                                    <option value="2">D</option>
-                                    <option value="1">E</option>
+									<option value="2">Ya</option>
+                                    <option value="1">Tidak</option>
 								</select>
                         </div>
                     </div>
@@ -154,8 +142,9 @@
                     </div>
                 </div>
             </div>
-            <!-- Ilmu Pengetahuan Alam	 -->
-            <!-- Pendidikan Kewarganegaraan -->
+            <!-- Futsal -->
+
+            <!-- Basket -->
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group row">
@@ -165,15 +154,8 @@
 							<select class="form-control" name="nilai_bst" id="nilai_bst" required>
 								<option value="">--Pilih Nilai--</option>
 								<option value="10">A</option>
-                                    <option value="9">A-</option>
-                                    <option value="8">B+</option>
-                                    <option value="7">B</option>
-                                    <option value="6">B-</option>
-                                    <option value="5">C+</option>
-                                    <option value="4">C</option>
-                                    <option value="3">C-</option>
-                                    <option value="2">D</option>
-                                    <option value="1">E</option>
+                                <option value="2">Ya</option>
+                                <option value="1">Tidak</option>
 							</select>
                         </div>
                     </div>
@@ -213,26 +195,20 @@
                     </div>
                 </div>
             </div>
-            <!-- Pendidikan Kewarganegaraan -->
-            <!-- Pendidikan Kewarganegaraan -->
+            <!-- Basket-->
+
+            <!-- Paskibra-->
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">paskibra</label>
+                        <label class="col-sm-6 col-form-label font-weight-bold">Paskibra</label>
                         <div class="col-sm-6">
                             <!-- <input type="number" class="form-control" name="nilai_paskib" id="nilai_paskib" required> -->
 							<select class="form-control" name="nilai_paskib" id="nilai_paskib" required>
 								<option value="">--Pilih Nilai--</option>
 								<option value="10">A</option>
-                                    <option value="9">A-</option>
-                                    <option value="8">B+</option>
-                                    <option value="7">B</option>
-                                    <option value="6">B-</option>
-                                    <option value="5">C+</option>
-                                    <option value="4">C</option>
-                                    <option value="3">C-</option>
-                                    <option value="2">D</option>
-                                    <option value="1">E</option>
+                                <option value="2">Ya</option>
+                                <option value="1">Tidak</option>
 							</select>
                         </div>
                     </div>
@@ -272,8 +248,9 @@
                     </div>
                 </div>
             </div>
-            <!-- Pendidikan Kewarganegaraan -->
         </div>
+        <!-- Paskibra -->
+
         <div class="row">
                 <div class="col-md-4">
                     <div class="form-group row">
@@ -303,7 +280,7 @@
                 </div>
         </div>
         
-        <div class="card-footer text-left">
+        <!-- <div class="card-footer text-left">
             <h6 class="m-0 font-weight-bold text-danger">Keterangan Rasio Nilai :</h6>
             <h6 class="m-0 font-weight-bold text-info">- Nilai A = 90 - 100</h6>
             <h6 class="m-0 font-weight-bold text-info">- Nilai A- = 80 - 89</h6>
@@ -315,7 +292,7 @@
             <h6 class="m-0 font-weight-bold text-info">- Nilai C- = 55 - 59</h6>
             <h6 class="m-0 font-weight-bold text-info">- Nilai D = 50 - 54</h6>
             <h6 class="m-0 font-weight-bold text-info">- Nilai E = Nilai < 50</h6>
-        </div>
+        </div> -->
         <div class="card-footer text-right">
             <button name="simpan" type="submit" class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
             <button type="reset" class="btn btn-info"><i class="fa fa-sync-alt"></i> Reset</button>
@@ -386,44 +363,6 @@
             nb = 5
         }else if(s == 1){
             nb = 4.5
-        }else if(s == -1){
-            nb = 4.5
-        }else if(s == 2){
-            nb = 4
-        }else if(s == -2){
-            nb = 4
-        }else if(s == 3){
-            nb = 3.5
-        }else if(s == -3){
-            nb = 3.5
-        }else if(s == 4){
-            nb = 3
-        }else if(s == -4){
-            nb = 3
-        }else if(s == 5){
-            nb = 2.5
-        }else if(s == -5){
-            nb = 2.5
-        }else if(s == 6){
-            nb = 2
-        }else if(s == -6){
-            nb = 2
-        }else if(s == 7){
-            nb = 1.5
-        }else if(s == -7){
-            nb = 1.5
-        }else if(s == 8){
-            nb = 1
-        }else if(s == -8){
-            nb = 1
-        }else if(s == 9){
-            nb = 0.5
-        }else if(s == -9){
-            nb = 0.5
-        }else if(s == 10){
-            nb = 0.5
-        }else if(s == -10){
-            nb = 0.5
         }
         document.getElementById("selisih_fsl").value = s;
         document.getElementById("nilai_bobot_fsl").value = nb;
@@ -434,47 +373,9 @@
         var t = document.getElementById("target_bst").value;
         var s = n-t;
         if(s == 0){
-            nb = 5
-        }else if(s == 1){
-            nb = 4.5
+            nb = 3
         }else if(s == -1){
-            nb = 4.5
-        }else if(s == 2){
-            nb = 4
-        }else if(s == -2){
-            nb = 4
-        }else if(s == 3){
-            nb = 3.5
-        }else if(s == -3){
-            nb = 3.5
-        }else if(s == 4){
-            nb = 3
-        }else if(s == -4){
-            nb = 3
-        }else if(s == 5){
-            nb = 2.5
-        }else if(s == -5){
-            nb = 2.5
-        }else if(s == 6){
-            nb = 2
-        }else if(s == -6){
-            nb = 2
-        }else if(s == 7){
-            nb = 1.5
-        }else if(s == -7){
-            nb = 1.5
-        }else if(s == 8){
             nb = 1
-        }else if(s == -8){
-            nb = 1
-        }else if(s == 9){
-            nb = 0.5
-        }else if(s == -9){
-            nb = 0.5
-        }else if(s == 10){
-            nb = 0.5
-        }else if(s == -10){
-            nb = 0.5
         }
         document.getElementById("selisih_bst").value = s;
         document.getElementById("nilai_bobot_bst").value = nb;
@@ -485,47 +386,9 @@
         var t = document.getElementById("target_paskib").value;
         var s = n-t;
         if(s == 0){
-            nb = 5
-        }else if(s == 1){
-            nb = 4.5
+            nb = 3
         }else if(s == -1){
-            nb = 4.5
-        }else if(s == 2){
-            nb = 4
-        }else if(s == -2){
-            nb = 4
-        }else if(s == 3){
-            nb = 3.5
-        }else if(s == -3){
-            nb = 3.5
-        }else if(s == 4){
-            nb = 3
-        }else if(s == -4){
-            nb = 3
-        }else if(s == 5){
-            nb = 2.5
-        }else if(s == -5){
-            nb = 2.5
-        }else if(s == 6){
-            nb = 2
-        }else if(s == -6){
-            nb = 2
-        }else if(s == 7){
-            nb = 1.5
-        }else if(s == -7){
-            nb = 1.5
-        }else if(s == 8){
             nb = 1
-        }else if(s == -8){
-            nb = 1
-        }else if(s == 9){
-            nb = 0.5
-        }else if(s == -9){
-            nb = 0.5
-        }else if(s == 10){
-            nb = 0.5
-        }else if(s == -10){
-            nb = 0.5
         }
         document.getElementById("selisih_paskib").value = s;
         document.getElementById("nilai_bobot_paskib").value = nb;
@@ -543,7 +406,4 @@
         document.getElementById("nilai_sf_A4").value  = sf;
         document.getElementById("nilai_tot_A4").value = nt;
     }
-
-   
-    
 </script>
