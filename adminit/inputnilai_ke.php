@@ -320,7 +320,7 @@
         var st = document.getElementById("nilai_bobot_st").value;
         var phs  = document.getElementById("nilai_bobot_phs").value;
         var cf  = (parseFloat(phs) + parseFloat(st)) / 2;
-        var sf  = (parseFloat(tg) ) / 1;
+        var sf  = (parseFloat(tg)) / 1;
         var nt  = (cf * 0.7) + (sf * 0.3);
 
         document.getElementById("nilai_cf_A2").value  = cf;
