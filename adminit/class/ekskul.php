@@ -157,7 +157,7 @@ class ekskul {
 				<th	th width="15%">Pramuka</th>
 				<th width="15%">Basket</th>
 				<th width="15%">Paskibra</th>
-				<th width="7%">Nilai CF (70%)</th>
+				<th width="7%">Nilai CF (60%)</th>
 				<th width="7%">Nilai SF (30%)</th>
 				<th width="7%">Nilai Total</th>
 				</tr>

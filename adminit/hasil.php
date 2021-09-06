@@ -148,7 +148,7 @@ $prestasi = new prestasi();
 <div class="card shadow mb-4">
     <!-- /.card-header -->
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-info"><i class="fa fa-table"></i> Hasil Aspek prestasi</h6>
+        <h6 class="m-0 font-weight-bold text-info"><i class="fa fa-table"></i> Hasil Aspek Prestasi</h6>
     </div>
 
     <div class="card-body">
@@ -243,6 +243,9 @@ $prestasi = new prestasi();
       <th width="22%">Nilai Penilaian<br/> <?php echo $persen; ?> %</th>
       <th width="18%">Nilai Kemampuan <br/> <?php echo $persen2; ?> %</th>
       <th width="18%">Nilai Kegiatan <br/> <?php echo $persen3; ?> %</th>
+      <th width="18%">Nilai Kegiatan <br/> <?php echo $persen4; ?> %</th>
+      <th width="18%">Nilai Kegiatan <br/> <?php echo $persen5; ?> %</th>
+      <th width="18%">Nilai Kegiatan <br/> <?php echo $persen6; ?> %</th>
 			<th width="10%">Total</th>
       <th width="15%">Ranking</th>
     </tr> 
@@ -256,19 +259,28 @@ $prestasi = new prestasi();
         if ($angkatan==null) {
         $angkatan=0;
         }
-            
+
             $query = "SELECT user.id_user, user.nama_lengkap, user.hak_akses, user.angkatan,user.nis,
 						pm_penilaian.nilai_tot_A1 as PE, 
             pm_kemampuan.nilai_tot_A2 as KE,
             pm_kegiatan.nilai_tot_A3 as KEG,
-             
+            pm_ekskul.nilai_tot_A4 as EKS,
+            pm_sikap.nilai_tot_A5 as SIK,
+            pm_prestasi.nilai_tot_A6 as PRE,
+
 						(((pm_penilaian.nilai_tot_A1*$persen)/100)
             +((pm_kemampuan.nilai_tot_A2*$persen2)/100)
+            +((pm_ekskul.nilai_tot_A4*$persen4)/100)
+            +((pm_sikap.nilai_tot_A5*$persen5)/100)
+            +((pm_prestasi.nilai_tot_A6*$persen6)/100)
             +((pm_kegiatan.nilai_tot_A3*$persen3)/100)) as Total
 						FROM user 
 						LEFT JOIN pm_penilaian ON user.id_user = pm_penilaian.id_user
 						LEFT JOIN pm_kemampuan ON user.id_user = pm_kemampuan.id_user
             LEFT JOIN pm_kegiatan ON user.id_user = pm_kegiatan.id_user
+            LEFT JOIN pm_ekskul ON user.id_user = pm_ekskul.id_user
+            LEFT JOIN pm_sikap ON user.id_user = pm_sikap.id_user
+            LEFT JOIN pm_prestasi ON user.id_user = pm_prestasi.id_user
 
 						where  user.angkatan LIKE '%$angkatan%' AND user.hak_akses = 'siswa' ORDER BY Total DESC";
             $hasil = $kon->query("$query");
@@ -290,6 +302,9 @@ $prestasi = new prestasi();
             echo '<td style="text-align: center">'.$row['PE'].'</td>';
             echo '<td style="text-align: center">'.$row['KE'].'</td>';
             echo '<td style="text-align: center">'.$row['KEG'].'</td>';
+            echo '<td style="text-align: center">'.$row['EKS'].'</td>';
+            echo '<td style="text-align: center">'.$row['SIK'].'</td>';
+            echo '<td style="text-align: center">'.$row['PRE'].'</td>';
             echo '<td style="text-align: center">'.number_format((float)$row['Total'], 2, '.', '').'</td>';
             echo '<td style="text-align: center">'.$no.'</td>';
 
@@ -297,7 +312,6 @@ $prestasi = new prestasi();
             }
           }
           ?>
-
     </tbody>
     </table>		
     </div>

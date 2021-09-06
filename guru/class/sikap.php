@@ -146,7 +146,7 @@ class sikap {
 					<th width="8%">Tanggungan Orang Tua</th>
 					<th width="12%">Status (Apakah Ikut Bantuan Spt: KJP, KIP,Lainnya)</th>
 					<th width="5%">Penghasilan Orang Tua</th>
-					<th width="7%">Nilai CF (70%)</th>
+					<th width="7%">Nilai CF (60%)</th>
 					<th width="7%">Nilai SF (30%)</th>
 					<th width="7%">Nilai Total</th>
 				</tr>
