@@ -277,7 +277,7 @@
                     </div>
                 </div>
         </div>
-        
+<!--         
         <div class="card-footer text-left">
             <h6 class="m-0 font-weight-bold text-danger">Keterangan Rasio Nilai :</h6>
             <h6 class="m-0 font-weight-bold text-info">- Nilai A = 90 - 100</h6>
@@ -290,7 +290,7 @@
             <h6 class="m-0 font-weight-bold text-info">- Nilai C- = 55 - 59</h6>
             <h6 class="m-0 font-weight-bold text-info">- Nilai D = 50 - 54</h6>
             <h6 class="m-0 font-weight-bold text-info">- Nilai E = Nilai < 50</h6>
-        </div>
+        </div> -->
         <div class="card-footer text-right">
             <button name="simpan" type="submit" class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
             <button type="reset" class="btn btn-info"><i class="fa fa-sync-alt"></i> Reset</button>
@@ -307,47 +307,9 @@
         var t = document.getElementById("target_orgs").value;
         var s = n-t;
 		if(s == 0){
-            nb = 5
-        }else if(s == 1){
-            nb = 4.5
+            nb = 3
         }else if(s == -1){
-            nb = 4.5
-        }else if(s == 2){
-            nb = 4
-        }else if(s == -2){
-            nb = 4
-        }else if(s == 3){
-            nb = 3.5
-        }else if(s == -3){
-            nb = 3.5
-        }else if(s == 4){
-            nb = 3
-        }else if(s == -4){
-            nb = 3
-        }else if(s == 5){
-            nb = 2.5
-        }else if(s == -5){
-            nb = 2.5
-        }else if(s == 6){
-            nb = 2
-        }else if(s == -6){
-            nb = 2
-        }else if(s == 7){
-            nb = 1.5
-        }else if(s == -7){
-            nb = 1.5
-        }else if(s == 8){
             nb = 1
-        }else if(s == -8){
-            nb = 1
-        }else if(s == 9){
-            nb = 0.5
-        }else if(s == -9){
-            nb = 0.5
-        }else if(s == 10){
-            nb = 0.5
-        }else if(s == -10){
-            nb = 0.5
         }
         document.getElementById("selisih_orgs").value = s;
         document.getElementById("nilai_bobot_orgs").value = nb;
@@ -358,47 +320,9 @@
         var t = document.getElementById("target_orgkg").value;
         var s = n-t;
         if(s == 0){
-            nb = 5
-        }else if(s == 1){
-            nb = 4.5
+            nb = 3
         }else if(s == -1){
-            nb = 4.5
-        }else if(s == 2){
-            nb = 4
-        }else if(s == -2){
-            nb = 4
-        }else if(s == 3){
-            nb = 3.5
-        }else if(s == -3){
-            nb = 3.5
-        }else if(s == 4){
-            nb = 3
-        }else if(s == -4){
-            nb = 3
-        }else if(s == 5){
-            nb = 2.5
-        }else if(s == -5){
-            nb = 2.5
-        }else if(s == 6){
-            nb = 2
-        }else if(s == -6){
-            nb = 2
-        }else if(s == 7){
-            nb = 1.5
-        }else if(s == -7){
-            nb = 1.5
-        }else if(s == 8){
             nb = 1
-        }else if(s == -8){
-            nb = 1
-        }else if(s == 9){
-            nb = 0.5
-        }else if(s == -9){
-            nb = 0.5
-        }else if(s == 10){
-            nb = 0.5
-        }else if(s == -10){
-            nb = 0.5
         }
         document.getElementById("selisih_orgkg").value = s;
         document.getElementById("nilai_bobot_orgkg").value = nb;
@@ -409,47 +333,9 @@
         var t = document.getElementById("target_orgpmi").value;
         var s = n-t;
         if(s == 0){
-            nb = 5
-        }else if(s == 1){
-            nb = 4.5
+            nb = 3
         }else if(s == -1){
-            nb = 4.5
-        }else if(s == 2){
-            nb = 4
-        }else if(s == -2){
-            nb = 4
-        }else if(s == 3){
-            nb = 3.5
-        }else if(s == -3){
-            nb = 3.5
-        }else if(s == 4){
-            nb = 3
-        }else if(s == -4){
-            nb = 3
-        }else if(s == 5){
-            nb = 2.5
-        }else if(s == -5){
-            nb = 2.5
-        }else if(s == 6){
-            nb = 2
-        }else if(s == -6){
-            nb = 2
-        }else if(s == 7){
-            nb = 1.5
-        }else if(s == -7){
-            nb = 1.5
-        }else if(s == 8){
             nb = 1
-        }else if(s == -8){
-            nb = 1
-        }else if(s == 9){
-            nb = 0.5
-        }else if(s == -9){
-            nb = 0.5
-        }else if(s == 10){
-            nb = 0.5
-        }else if(s == -10){
-            nb = 0.5
         }
         document.getElementById("selisih_orgpmi").value = s;
         document.getElementById("nilai_bobot_orgpmi").value = nb;
@@ -460,47 +346,9 @@
         var t = document.getElementById("target_osis").value;
         var s = n-t;
         if(s == 0){
-            nb = 5
-        }else if(s == 1){
-            nb = 4.5
+            nb = 3
         }else if(s == -1){
-            nb = 4.5
-        }else if(s == 2){
-            nb = 4
-        }else if(s == -2){
-            nb = 4
-        }else if(s == 3){
-            nb = 3.5
-        }else if(s == -3){
-            nb = 3.5
-        }else if(s == 4){
-            nb = 3
-        }else if(s == -4){
-            nb = 3
-        }else if(s == 5){
-            nb = 2.5
-        }else if(s == -5){
-            nb = 2.5
-        }else if(s == 6){
-            nb = 2
-        }else if(s == -6){
-            nb = 2
-        }else if(s == 7){
-            nb = 1.5
-        }else if(s == -7){
-            nb = 1.5
-        }else if(s == 8){
             nb = 1
-        }else if(s == -8){
-            nb = 1
-        }else if(s == 9){
-            nb = 0.5
-        }else if(s == -9){
-            nb = 0.5
-        }else if(s == 10){
-            nb = 0.5
-        }else if(s == -10){
-            nb = 0.5
         }
         document.getElementById("selisih_osis").value = s;
         document.getElementById("nilai_bobot_osis").value = nb;
@@ -518,5 +366,4 @@
         document.getElementById("nilai_sf_A3").value  = sf;
         document.getElementById("nilai_tot_A3").value = nt;
     }
-
 </script>
