@@ -65,7 +65,7 @@
 								<?php
                                     require_once "database.php";
                                     $db  = new database();
-                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='IPS'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
+                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='pram'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
                                     ?>
                             </select>
                         </div>
@@ -117,7 +117,7 @@
 								<?php
                                     require_once "database.php";
                                     $db  = new database();
-                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='IPA'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
+                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='FTS'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
                                     ?>
                             </select>
                         </div>
@@ -153,7 +153,6 @@
                             <!-- <input type="number" class="form-control" name="nilai_bst" id="nilai_bst" required> -->
 							<select class="form-control" name="nilai_bst" id="nilai_bst" required>
 								<option value="">--Pilih Nilai--</option>
-								<option value="10">A</option>
                                 <option value="2">Ya</option>
                                 <option value="1">Tidak</option>
 							</select>
@@ -170,7 +169,7 @@
 								<?php
                                     require_once "database.php";
                                     $db  = new database();
-                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='PKN'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
+                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='BKT'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
                                     ?>
                             </select>
                         </div>
@@ -206,7 +205,6 @@
                             <!-- <input type="number" class="form-control" name="nilai_paskib" id="nilai_paskib" required> -->
 							<select class="form-control" name="nilai_paskib" id="nilai_paskib" required>
 								<option value="">--Pilih Nilai--</option>
-								<option value="10">A</option>
                                 <option value="2">Ya</option>
                                 <option value="1">Tidak</option>
 							</select>
@@ -223,7 +221,7 @@
 								<?php
                                     require_once "database.php";
                                     $db  = new database();
-                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='PKN'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
+                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='PASK'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
                                     ?>
                             </select>
                         </div>
@@ -308,48 +306,10 @@
         var n = document.getElementById("nilai_prm").value;
         var t = document.getElementById("target_prm").value;
         var s = n-t;
-		if(s == 0){
-            nb = 5
-        }else if(s == 1){
-            nb = 4.5
+        if(s == 0){
+            nb = 3
         }else if(s == -1){
-            nb = 4.5
-        }else if(s == 2){
-            nb = 4
-        }else if(s == -2){
-            nb = 4
-        }else if(s == 3){
-            nb = 3.5
-        }else if(s == -3){
-            nb = 3.5
-        }else if(s == 4){
-            nb = 3
-        }else if(s == -4){
-            nb = 3
-        }else if(s == 5){
-            nb = 2.5
-        }else if(s == -5){
-            nb = 2.5
-        }else if(s == 6){
-            nb = 2
-        }else if(s == -6){
-            nb = 2
-        }else if(s == 7){
-            nb = 1.5
-        }else if(s == -7){
-            nb = 1.5
-        }else if(s == 8){
             nb = 1
-        }else if(s == -8){
-            nb = 1
-        }else if(s == 9){
-            nb = 0.5
-        }else if(s == -9){
-            nb = 0.5
-        }else if(s == 10){
-            nb = 0.5
-        }else if(s == -10){
-            nb = 0.5
         }
         document.getElementById("selisih_prm").value = s;
         document.getElementById("nilai_bobot_prm").value = nb;
@@ -360,9 +320,9 @@
         var t = document.getElementById("target_fsl").value;
         var s = n-t;
         if(s == 0){
-            nb = 5
-        }else if(s == 1){
-            nb = 4.5
+            nb = 3
+        }else if(s == -1){
+            nb = 1
         }
         document.getElementById("selisih_fsl").value = s;
         document.getElementById("nilai_bobot_fsl").value = nb;
@@ -393,14 +353,14 @@
         document.getElementById("selisih_paskib").value = s;
         document.getElementById("nilai_bobot_paskib").value = nb;
 
-        var ips = document.getElementById("nilai_bobot_prm").value;
-        var ipa = document.getElementById("nilai_bobot_fsl").value;
-        var pkn = document.getElementById("nilai_bobot_bst").value;
-        var pknn = document.getElementById("nilai_bobot_paskib").value;
+        var pramuka = document.getElementById("nilai_bobot_prm").value;
+        var futsal = document.getElementById("nilai_bobot_fsl").value;
+        var basket = document.getElementById("nilai_bobot_bst").value;
+        var paskib = document.getElementById("nilai_bobot_paskib").value;
 
-        var cf = (parseFloat(ips) + parseFloat(pknn)) / 2;
-        var sf = (parseFloat(pkn) + parseFloat(ipa)) / 2;
-        var nt = (cf * 0.5) + (sf * 0.5);
+        var cf = (parseFloat(paskib) + parseFloat(pramuka)) / 2;
+        var sf = (parseFloat(futsal) + parseFloat(basket)) / 2;
+        var nt = (cf * 0.6) + (sf * 0.4);
 
         document.getElementById("nilai_cf_A4").value  = cf;
         document.getElementById("nilai_sf_A4").value  = sf;
