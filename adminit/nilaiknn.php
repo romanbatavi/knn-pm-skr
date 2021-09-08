@@ -218,7 +218,7 @@ function e($val){
 
                             </div>
                         </div>	
-                      
+
 						<div class="form-group row">
                             <label for="" class="col-sm-4 col-form-label">Berkomunikasi Dengan Baik</label>
                             <div class="col-sm-8">
