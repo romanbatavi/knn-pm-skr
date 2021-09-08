@@ -31,6 +31,7 @@
                     </div>
                 </div>
 
+                <!-- Kode Kriteria -->
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <label for="" class="font-weight-bold">Kode Kriteria</label>
                     <div class="form-group">
@@ -38,6 +39,7 @@
                     </div>
                 </div>
 
+                <!-- Kriteria -->
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <label for="" class="font-weight-bold">Kriteria</label>
                     <div class="form-group">
@@ -45,6 +47,7 @@
                     </div>
                 </div>
 
+                <!-- Core Factor / Secondary Factor -->
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <label for="" class="font-weight-bold">Jenis Factor</label>
                     <div class="form-group">
@@ -56,6 +59,7 @@
                     </div>
                 </div>
 
+                <!-- Persentase Nilai -->
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <label for="" class="font-weight-bold">Nilai Target</label>
                     <div class="form-group">
