@@ -15,8 +15,6 @@ $hasilnya = array('id_user'=>$tampil['id_user'],
 				'mtk'=>$tampil['mtk'],
 				'bing'=>$tampil['bing'],
 				'agama'=>$tampil['agama'],
-
-
-			);
+				);
 echo json_encode($hasilnya);
 ?>
