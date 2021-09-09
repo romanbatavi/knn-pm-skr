@@ -23,35 +23,37 @@
 							</tr>
 						</thead>
 						<?php
-					$q = esc_field($_GET['q']);
-					$rows = $db->get_results("SELECT * FROM tb_atribut WHERE nama_atribut LIKE '%$q%' ORDER BY id_atribut");
-					$no = 0;
-					foreach ($rows as $row) : ?>
+							$q = esc_field($_GET['q']);
+							$rows = $db->get_results("SELECT * FROM tb_atribut WHERE nama_atribut LIKE '%$q%' ORDER BY id_atribut");
+							$no = 0;
+							foreach ($rows as $row) : 
+								?>
 					<tbody>
 						<tr>
-							<td><?= $row->id_atribut 
-				?>
-				</td>
-                <td><?= $row->nama_atribut ?></td>
-                <td><?= $row->keterangan ?></td>
-                <td>
-					<a class="btn btn-xs btn-warning" href="?m=atribut_ubah&ID=<?= $row->id_atribut ?>"><i class="fa fa-edit"></i></a>
-					<a class="btn btn-xs btn-danger" href="aksi.php?act=atribut_hapus&ID=<?= $row->id_atribut ?>" onclick="return confirm('Hapus Data?')"><i class="fa fa-trash"></i></a>
-                </td>
-			</tr>
-			<?php endforeach ?>	
-		</tbody>
-		<tfoot>
-			<tr>
-				<th>Kode</th>
-				<th>Nama Atribut</th>
-				<th>Keterangan</th>
-				<th>Aksi</th>
-			</tr>
-		</tfoot>
-	</table>	
-</div>
-</div>
-</div>
+							<td>
+								<?= $row->id_atribut 
+							?>
+							</td>
+							<td><?= $row->nama_atribut ?></td>
+							<td><?= $row->keterangan ?></td>
+							<td>
+								<a class="btn btn-xs btn-warning" href="?m=atribut_ubah&ID=<?= $row->id_atribut ?>"><i class="fa fa-edit"></i></a>
+								<a class="btn btn-xs btn-danger" href="aksi.php?act=atribut_hapus&ID=<?= $row->id_atribut ?>" onclick="return confirm('Hapus Data?')"><i class="fa fa-trash"></i></a>
+							</td>
+						</tr>
+						<?php endforeach ?>	
+					</tbody>	
+					<tfoot>
+						<tr>
+							<th>Kode</th>
+							<th>Nama Atribut</th>
+							<th>Keterangan</th>
+							<th>Aksi</th>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+	</div>
 </div>
 </div>
