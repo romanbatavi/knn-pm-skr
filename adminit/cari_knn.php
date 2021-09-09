@@ -1,4 +1,4 @@
-<?php 
+<?php
 include "../views/proses.php";
 $query = $db->get("user.id_user,user.nama_lengkap,master_knn.id_user,master_knn.A01,master_knn.A03,master_knn.A06
 ,master_knn.A08","master_knn","INNER JOIN user ON master_knn.id_user=user.id_user WHERE master_knn.id_user='$_POST[id_user]'");
