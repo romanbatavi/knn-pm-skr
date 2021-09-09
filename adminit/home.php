@@ -4,12 +4,12 @@ include './../views/config.php';
 include_once('function/helper.php');
 
 if(isset($_POST['b_edit'])) {
-    user_peserta_status($koneksi, $_POST['status'], $_GET['id_user']);
+	user_peserta_status($koneksi, $_POST['status'], $_GET['id_user']);
 }
 
 error_reporting(0);
 if($_GET['hal'] == 'edit'){
-    $_SESSION['edit'] =  $_GET['id_user'];
+	$_SESSION['edit'] =  $_GET['id_user'];
     $id_user = $_SESSION['edit'];
     $obj_edit = mysqli_query($koneksi, "SELECT * FROM user WHERE id_user = '$id_user' ");
     $arr_edit = mysqli_fetch_array($obj_edit);
@@ -20,21 +20,21 @@ if($_GET['hal'] == 'edit'){
 ?>
 
 <div class="container-fluid">
-				<div class="row">
-					<div class="col-12">
-						<div class="portlet">
-							<div class="widget10 widget10-vertical-md">
-								<div class="widget10-item">
-									<div class="widget10-content">
-										<h2 class="widget10-title">$27,639</h2>
-										<span class="widget10-subtitle">Total revenue</span>
-									</div>
-									<div class="widget10-addon">
-										<div class="avatar avatar-label-info avatar-circle widget8-avatar m-0">
-											<div class="avatar-display">
-												<i class="fa fa-dollar-sign"></i>
-											</div>
-										</div>
+	<div class="row">
+		<div class="col-12">
+			<div class="portlet">
+				<div class="widget10 widget10-vertical-md">
+					<div class="widget10-item">
+						<div class="widget10-content">
+							<h2 class="widget10-title">$27,639</h2>
+							<span class="widget10-subtitle">Total revenue</span>
+						</div>
+						<div class="widget10-addon">
+							<div class="avatar avatar-label-info avatar-circle widget8-avatar m-0">
+								<div class="avatar-display">
+									<i class="fa fa-dollar-sign"></i>
+								</div>
+							</div>
 									</div>
 								</div>
 								<div class="widget10-item">
@@ -101,7 +101,7 @@ if($_GET['hal'] == 'edit'){
 									</div>
 									<div class="portlet-body">
 										<div class="rich-list rich-list-bordered rich-list-action">
-										<?php
+											<?php
 											include './../views/config.php';
 											//fetching data in descending order (lastest entry first)
 											$result = mysqli_query($mysqli, "SELECT * FROM user WHERE hak_akses='siswa' AND status='no' ");
@@ -109,17 +109,17 @@ if($_GET['hal'] == 'edit'){
 											?>
 										<?php
 											while($res = mysqli_fetch_array($result)) {	
+												
+												if ($res['status'] == 'no') {
+													$label = "Inactive";
+												} 
 									
-									if ($res['status'] == 'no') {
-										$label = "Inactive";
-									} 
-									
-									?>
+												?>
 											<div class="rich-list-item">
 												<div class="rich-list-prepend">
 													<div class="avatar avatar-label-info">
 														<div class="avatar-display">
-														<img src="https://i.ibb.co/1rgsP47/download.png" alt="Avatar image">
+															<img src="https://i.ibb.co/1rgsP47/download.png" alt="Avatar image">
 														</div>
 													</div>
 												</div>
@@ -140,7 +140,7 @@ if($_GET['hal'] == 'edit'){
 													</div>
 												</div>
 											</div>
-									<?php } ?>
+											<?php } ?>
 										</div>
 									</div>
 								</div>
@@ -149,46 +149,46 @@ if($_GET['hal'] == 'edit'){
 					</div>
 				</div>
 			</div>
-
-<!-- Modal Edit Data Kriteria -->
-<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header bg-warning text-white">
-                    <h5 class="modal-title" id="exampleModalLabel"> <i class="fas fa-user-plus"></i> Aktifasi Akun Untuk Pendaftaran Beasiswa</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="widget widget-table-two">
-                
-                </div>
-                <div class="modal-body">
-                    <form method="post" action="">
-                        
-                        <div class="form-group row">
-                            <label for="" class="col-sm-4 col-form-label">Pilih Status (<?=@$arr_edit['nama_lengkap']?>) Apakah DiTerima/Tidak</label>
-                            <div class="col-sm-8">
-                                <select class="custom-select" name="status">
-                                    <option value="<?=@$arr_edit['status']?>">Pilih Aktifasi</option>
-                                    <option value="ya">Terima</option>
-                                    <option value="no">Tolak</option>
-                                </select>
-                            </div>
-                        </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" name="b_edit" class="btn bg-warning text-white"> <i class="fas fa-save"></i> Simpan</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-<!-- Modal Edit Kriteria -->  
-<script>
-if (edit) {
-    $(document).ready(function(){
-        $('#exampleModal2').modal();
-    });
-}
-</script>
+			
+			<!-- Modal Edit Data Kriteria -->
+			<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header bg-warning text-white">
+							<h5 class="modal-title" id="exampleModalLabel"> <i class="fas fa-user-plus"></i> Aktifasi Akun Untuk Pendaftaran Beasiswa</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="widget widget-table-two">
+							
+							</div>
+							<div class="modal-body">
+								<form method="post" action="">
+									
+									<div class="form-group row">
+										<label for="" class="col-sm-4 col-form-label">Pilih Status (<?=@$arr_edit['nama_lengkap']?>) Apakah DiTerima/Tidak</label>
+										<div class="col-sm-8">
+											<select class="custom-select" name="status">
+												<option value="<?=@$arr_edit['status']?>">Pilih Aktifasi</option>
+												<option value="ya">Terima</option>
+												<option value="no">Tolak</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="submit" name="b_edit" class="btn bg-warning text-white"> <i class="fas fa-save"></i> Simpan</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Modal Edit Kriteria -->  
+				<script>
+					if (edit) {
+						$(document).ready(function(){
+							$('#exampleModal2').modal();
+						});
+					}
+				</script>

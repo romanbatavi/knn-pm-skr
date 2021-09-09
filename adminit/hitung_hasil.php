@@ -18,38 +18,38 @@ $knn = new KNN($dataset, $TARGET, $_POST['nilai'], $nilai_k);
                     <th>Nomor</th>
                     <?php foreach ($ATRIBUT as $key => $val) : ?>
                         <th><?= $val->nama_atribut ?></th>
-                    <?php endforeach ?>
-                </tr>
-            </thead>
-            <?php
+                        <?php endforeach ?>
+                    </tr>
+                </thead>
+                <?php
             foreach ($knn->dataset as $key => $val) : ?>
                 <tr>
                     <td><?= $key ?></td>
                     <?php foreach ($val as $k => $v) : ?>
                         <td><?= $ATRIBUT_NILAI[$k] ? $NILAI[$v]->nama_nilai : $v ?></td>
-                    <?php endforeach ?>
-                </tr>
-            <?php endforeach; ?>
-        </table>
-    </div>
-</div>
-<div class="panel panel-primary">
-    <div class="panel-heading">
-        <h3 class="panel-title">
-            <a href="#dataset_nilai" data-toggle="collapse">Dataset Nilai</a>
-        </h3>
-    </div>
-    <div class="table-responsive collapse" id="dataset_nilai">
-        <table id="datatable-1-2" class="table table-bordered table-striped table-hover nowrap">
-            <thead>
-                <tr class="nw">
-                    <th>Nomor</th>
-                    <?php foreach ($ATRIBUT as $key => $val) : ?>
-                        <th><?= $val->nama_atribut ?></th>
-                    <?php endforeach ?>
-                </tr>
-            </thead>
-            <?php
+                        <?php endforeach ?>
+                    </tr>
+                    <?php endforeach; ?>
+                </table>
+            </div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <a href="#dataset_nilai" data-toggle="collapse">Dataset Nilai</a>
+                </h3>
+            </div>
+            <div class="table-responsive collapse" id="dataset_nilai">
+                <table id="datatable-1-2" class="table table-bordered table-striped table-hover nowrap">
+                    <thead>
+                        <tr class="nw">
+                            <th>Nomor</th>
+                            <?php foreach ($ATRIBUT as $key => $val) : ?>
+                                <th><?= $val->nama_atribut ?></th>
+                                <?php endforeach ?>
+                            </tr>
+                        </thead>
+                        <?php
             foreach ($knn->dataset_nilai as $key => $val) : ?>
                 <tr>
                     <td><?= $key ?></td>
@@ -74,26 +74,26 @@ $knn = new KNN($dataset, $TARGET, $_POST['nilai'], $nilai_k);
                     <th>Nomor</th>
                     <?php foreach ($ATRIBUT as $key => $val) : ?>
                         <th><?= $val->nama_atribut ?></th>
-                    <?php endforeach ?>
-                    <th>Jarak</th>
-                </tr>
-            </thead>
-            <?php foreach ($knn->nearest as $key) : ?>
-                <tr>
-                    <td><?= $key ?></td>
-                    <?php foreach ($knn->kuadrat[$key] as $k => $v) : ?>
-                        <td><?= round($v, 3) ?></td>
-                    <?php endforeach ?>
-                    <td><?= $NILAI[$knn->dataset[$key][$TARGET]]->nama_nilai  ?></td>
-                    <td><?= round($knn->jarak[$key], 3) ?></td>
-                </tr>
-            <?php endforeach; ?>
-        </table>
-    </div>
-</div>
-<div class="panel panel-primary">
-    <div class="panel-heading">
-        <h3 class="panel-title">Total</h3>
+                        <?php endforeach ?>
+                        <th>Jarak</th>
+                    </tr>
+                </thead>
+                <?php foreach ($knn->nearest as $key) : ?>
+                    <tr>
+                        <td><?= $key ?></td>
+                        <?php foreach ($knn->kuadrat[$key] as $k => $v) : ?>
+                            <td><?= round($v, 3) ?></td>
+                            <?php endforeach ?>
+                            <td><?= $NILAI[$knn->dataset[$key][$TARGET]]->nama_nilai  ?></td>
+                            <td><?= round($knn->jarak[$key], 3) ?></td>
+                        </tr>
+                        <?php endforeach; ?>
+                    </table>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Total</h3>
     </div>
     <div class="table-responsive">
         <table id="datatable-1" class="table table-bordered table-striped table-hover nowrap">
@@ -108,11 +108,11 @@ $knn = new KNN($dataset, $TARGET, $_POST['nilai'], $nilai_k);
                     <td><?= $NILAI[$key]->nama_nilai ?></td>
                     <td><?= $val ?></td>
                 </tr>
-            <?php endforeach ?>
-        </table>
+                <?php endforeach ?>
+            </table>
+        </div>
     </div>
-</div>
-<?php
+    <?php
 $str = array();
 foreach ($_POST['nilai'] as $key => $val) {
     $nama = ($ATRIBUT_NILAI[$key]) ? $NILAI[$val]->nama_nilai : $val;
