@@ -1,8 +1,5 @@
 <?php
 require_once 'functions.php';
-
-
-
 /** DATASET */
 if ($mod == 'dataset_tambah') {
     $nomor = $_POST['nomor'];
