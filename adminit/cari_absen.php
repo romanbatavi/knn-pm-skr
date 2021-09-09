@@ -1,4 +1,4 @@
-<?php 
+<?php
 include "../views/proses.php";
 $query = $db->get("user.id_user,user.nama_lengkap,master_nilai.id_user,master_nilai.ips,master_nilai.ipa,master_nilai.pkn
 ,master_nilai.bindo,

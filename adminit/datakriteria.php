@@ -19,7 +19,7 @@ $kriteria = new kriteria();
 					<hr> -->
 					<?php
                         $kriteria->tampil(); 
-						?>
+					?>
 				</div>
 			</div>
 		</div>
