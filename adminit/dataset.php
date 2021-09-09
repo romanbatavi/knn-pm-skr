@@ -27,42 +27,42 @@
                                 <?php foreach ($ATRIBUT as $key => $val) : ?>
                                     <th><?= $val->nama_atribut ?></th>
                                     <?php endforeach ?>
-                                    <th>Aksi</th>
-								</tr>
-                            </thead>
-                            <?php
-                                $q = esc_field($_GET['q']);
-                                $rows = $db->get_results("SELECT * FROM tb_dataset WHERE ket_dataset LIKE '%$q%' GROUP BY nomor");
-                                $dataset = get_dataset();
-                                foreach ($rows as $row) : ?>
-								<tbody>
-                                    <tr>
-                                        <td><?= $row->nomor ?></td>
-                                        <td><?= $row->ket_dataset ?></td>
-                                        <?php foreach ($dataset[$row->nomor] as $k => $v) : ?>
-                                            <td><?= $ATRIBUT_NILAI[$k] ? $NILAI[$v]->nama_nilai : $v ?></td>
-                                            <?php endforeach ?>
-                                            <td>
-                                                <a class="btn btn-xs btn-warning" href="?m=dataset_ubah&ID=<?= $row->nomor ?>"><i class="fa fa-edit"></i></a>
-                                                <a class="btn btn-xs btn-danger" href="aksi.php?act=dataset_hapus&ID=<?= $row->nomor ?>" onclick="return confirm('Hapus Data?')"><i class="fa fa-trash"></i></a>
-                                            </td>
-                                        </tr>
-                                        <?php endforeach ?>
-                                        
-                                    </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Nomor</th>
-                                            <th>Keterangan</th>
-                                            <?php foreach ($ATRIBUT as $key => $val) : ?>
-                                                <th><?= $val->nama_atribut ?></th>
-                                                <?php endforeach ?>
-                                                <th>Aksi</th>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>            
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <?php
+                            $q = esc_field($_GET['q']);
+                            $rows = $db->get_results("SELECT * FROM tb_dataset WHERE ket_dataset LIKE '%$q%' GROUP BY nomor");
+                            $dataset = get_dataset();
+                            foreach ($rows as $row) : 
+                        ?>
+						<tbody>
+                            <tr>
+                                <td><?= $row->nomor ?></td>
+                                <td><?= $row->ket_dataset ?></td>
+                                <?php foreach ($dataset[$row->nomor] as $k => $v) : ?>
+                                <td><?= $ATRIBUT_NILAI[$k] ? $NILAI[$v]->nama_nilai : $v ?></td>
+                                <?php endforeach ?>
+                                <td>
+                                    <a class="btn btn-xs btn-warning" href="?m=dataset_ubah&ID=<?= $row->nomor ?>"><i class="fa fa-edit"></i></a>
+                                    <a class="btn btn-xs btn-danger" href="aksi.php?act=dataset_hapus&ID=<?= $row->nomor ?>" onclick="return confirm('Hapus Data?')"><i class="fa fa-trash"></i></a>
+                                </td>
+                            </tr>
+                                <?php endforeach ?>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Nomor</th>
+                                <th>Keterangan</th>
+                                <?php foreach ($ATRIBUT as $key => $val) : ?>
+                                <th><?= $val->nama_atribut ?></th>
+                                <?php endforeach ?>
+                                <th>Aksi</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
