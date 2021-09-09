@@ -1,26 +1,26 @@
 <div class="container-fluid">
-	<div class="row">
-		<div class="col-12">
-			<div class="portlet">
-				<div class="portlet-header portlet-header-bordered">
-					<h3 class="portlet-title">Tambah Data kegiatan </h3>
-					</div>
-					<div class="portlet-body">
-                        <!-- <p>
-                            In this example you can see Datatable doing both horizontal and vertical scrolling at the same time. To enable y-scrolling or x-scrolling simply set the <code>scrollY|scrollX</code> parameter to be whatever you want the container wrapper's height or width.
-                        </p>
-                        <hr> -->
-	<form method="POST" action="?m=prosesnilai_eks">
-        <div class="card-body">
-		<div class="form-group row">
-                <label class="col-sm-2 col-form-label font-weight-bold">Angkatan</label>
-                <div class="col-sm-10">
-                <?php $years = range(2020, strftime("%Y", time())); ?>
-                    <select class="form-control" name="angkatan" required>
-                        <option value="">--Pilih Angkatan--</option>
-                        <?php foreach($years as $year) : ?>
-                    <option value="<?php echo $year; ?>"><?php echo $year; ?></option>
-                        <?php endforeach; ?>
+    <div class="row">
+        <div class="col-12">
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Tambah Data kegiatan </h3>
+                </div>
+                <div class="portlet-body">
+                    <!-- <p>
+                        In this example you can see Datatable doing both horizontal and vertical scrolling at the same time. To enable y-scrolling or x-scrolling simply set the <code>scrollY|scrollX</code> parameter to be whatever you want the container wrapper's height or width.
+                    </p>
+                    <hr> -->
+                    <form method="POST" action="?m=prosesnilai_eks">
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label font-weight-bold">Angkatan</label>
+                                <div class="col-sm-10">
+                                    <?php $years = range(2020, strftime("%Y", time())); ?>
+                                    <select class="form-control" name="angkatan" required>
+                                        <option value="">--Pilih Angkatan--</option>
+                                        <?php foreach($years as $year) : ?>
+                                            <option value="<?php echo $year; ?>"><?php echo $year; ?></option>
+                                            <?php endforeach; ?>
                     </select>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                     </select>
                 </div>
             </div>
-
+            
             <!-- Pramuka -->
             <div class="row">
                 <div class="col-md-4">
@@ -47,15 +47,15 @@
                         <label class="col-sm-6 col-form-label font-weight-bold">Pramuka</label>
                         <div class="col-sm-6">
                             <!-- <input type="number" class="form-control" name="nilai_prm" id="nilai_prm" required> -->
-                                <select class="form-control" name="nilai_prm" id="nilai_prm" required>
-                                    <option value="">--Pilih Nilai--</option>
-                                    <option value="2">Ya</option>
-                                    <option value="1">Tidak</option>
-                                </select>
+                            <select class="form-control" name="nilai_prm" id="nilai_prm" required>
+                                <option value="">--Pilih Nilai--</option>
+                                <option value="2">Ya</option>
+                                <option value="1">Tidak</option>
+                            </select>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col-md-4">
                     <div class="form-group row">
                         <label class="col-sm-6 col-form-label font-weight-bold">Nilai Target</label>
@@ -71,7 +71,7 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col-md-2">
                     <div class="form-group row">
                         <label class="col-sm-6 col-form-label font-weight-bold">GAP</label>
@@ -80,7 +80,7 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col-md-2">
                     <div class="form-group row">
                         <label class="col-sm-6 col-form-label font-weight-bold">Bobot</label>
@@ -91,7 +91,7 @@
                 </div>
             </div>
             <!-- Pramuka -->
-
+            
             <!-- Futsal-->
             <div class="row">
                 <div class="col-md-4">
@@ -99,15 +99,15 @@
                         <label class="col-sm-6 col-form-label font-weight-bold">Futsal</label>
                         <div class="col-sm-6">
                             <!-- <input type="number" class="form-control" name="nilai_fsl" id="nilai_fsl" required> -->
-								<select class="form-control" name="nilai_fsl" id="nilai_fsl" required>
-									<option value="">--Pilih Nilai--</option>
-									<option value="2">Ya</option>
-                                    <option value="1">Tidak</option>
-								</select>
+                            <select class="form-control" name="nilai_fsl" id="nilai_fsl" required>
+                                <option value="">--Pilih Nilai--</option>
+                                <option value="2">Ya</option>
+                                <option value="1">Tidak</option>
+                            </select>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col-md-4">
                     <div class="form-group row">
                         <label class="col-sm-6 col-form-label font-weight-bold">Nilai Target</label>
@@ -123,7 +123,7 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col-md-2">
                     <div class="form-group row">
                         <label class="col-sm-6 col-form-label font-weight-bold">GAP</label>
@@ -132,7 +132,7 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col-md-2">
                     <div class="form-group row">
                         <label class="col-sm-6 col-form-label font-weight-bold">Bobot</label>
@@ -143,7 +143,7 @@
                 </div>
             </div>
             <!-- Futsal -->
-
+            
             <!-- Basket -->
             <div class="row">
                 <div class="col-md-4">
@@ -152,14 +152,14 @@
                         <div class="col-sm-6">
                             <!-- <input type="number" class="form-control" name="nilai_bst" id="nilai_bst" required> -->
 							<select class="form-control" name="nilai_bst" id="nilai_bst" required>
-								<option value="">--Pilih Nilai--</option>
+                                <option value="">--Pilih Nilai--</option>
                                 <option value="2">Ya</option>
                                 <option value="1">Tidak</option>
 							</select>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col-md-4">
                     <div class="form-group row">
                         <label class="col-sm-6 col-form-label font-weight-bold">Nilai Target</label>
@@ -175,7 +175,7 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col-md-2">
                     <div class="form-group row">
                         <label class="col-sm-6 col-form-label font-weight-bold">GAP</label>
@@ -184,7 +184,7 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col-md-2">
                     <div class="form-group row">
                         <label class="col-sm-6 col-form-label font-weight-bold">Bobot</label>
@@ -195,7 +195,7 @@
                 </div>
             </div>
             <!-- Basket-->
-
+            
             <!-- Paskibra-->
             <div class="row">
                 <div class="col-md-4">
@@ -204,14 +204,14 @@
                         <div class="col-sm-6">
                             <!-- <input type="number" class="form-control" name="nilai_paskib" id="nilai_paskib" required> -->
 							<select class="form-control" name="nilai_paskib" id="nilai_paskib" required>
-								<option value="">--Pilih Nilai--</option>
+                                <option value="">--Pilih Nilai--</option>
                                 <option value="2">Ya</option>
                                 <option value="1">Tidak</option>
 							</select>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col-md-4">
                     <div class="form-group row">
                         <label class="col-sm-6 col-form-label font-weight-bold">Nilai Target</label>
@@ -227,7 +227,7 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col-md-2">
                     <div class="form-group row">
                         <label class="col-sm-6 col-form-label font-weight-bold">GAP</label>
@@ -236,7 +236,7 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col-md-2">
                     <div class="form-group row">
                         <label class="col-sm-6 col-form-label font-weight-bold">Bobot</label>
@@ -248,7 +248,7 @@
             </div>
         </div>
         <!-- Paskibra -->
-
+        
         <div class="row">
                 <div class="col-md-4">
                     <div class="form-group row">
@@ -258,7 +258,7 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col-md-4">
                     <div class="form-group row">
                         <label class="col-sm-6 col-form-label font-weight-bold">Nilai Secondary Factor</label>
@@ -267,7 +267,7 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col-md-4">
                     <div class="form-group row">
                         <label class="col-sm-6 col-form-label font-weight-bold">Nilai Total</label>
@@ -276,32 +276,32 @@
                         </div>
                     </div>
                 </div>
-        </div>
+            </div>
         
-        <!-- <div class="card-footer text-left">
-            <h6 class="m-0 font-weight-bold text-danger">Keterangan Rasio Nilai :</h6>
-            <h6 class="m-0 font-weight-bold text-info">- Nilai A = 90 - 100</h6>
-            <h6 class="m-0 font-weight-bold text-info">- Nilai A- = 80 - 89</h6>
-            <h6 class="m-0 font-weight-bold text-info">- Nilai B+ = 73 - 75</h6>
-            <h6 class="m-0 font-weight-bold text-info">- Nilai B = 70 - 72</h6>
-            <h6 class="m-0 font-weight-bold text-info">- Nilai B- = 68 - 69</h6>
-            <h6 class="m-0 font-weight-bold text-info">- Nilai C+ = 64 - 67</h6>
-            <h6 class="m-0 font-weight-bold text-info">- Nilai C = 60 - 63</h6>
-            <h6 class="m-0 font-weight-bold text-info">- Nilai C- = 55 - 59</h6>
-            <h6 class="m-0 font-weight-bold text-info">- Nilai D = 50 - 54</h6>
-            <h6 class="m-0 font-weight-bold text-info">- Nilai E = Nilai < 50</h6>
-        </div> -->
-        <div class="card-footer text-right">
-            <button name="simpan" type="submit" class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
-            <button type="reset" class="btn btn-info"><i class="fa fa-sync-alt"></i> Reset</button>
-        </div>
-    </form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-            <script>
+            <!-- <div class="card-footer text-left">
+                <h6 class="m-0 font-weight-bold text-danger">Keterangan Rasio Nilai :</h6>
+                <h6 class="m-0 font-weight-bold text-info">- Nilai A = 90 - 100</h6>
+                <h6 class="m-0 font-weight-bold text-info">- Nilai A- = 80 - 89</h6>
+                <h6 class="m-0 font-weight-bold text-info">- Nilai B+ = 73 - 75</h6>
+                <h6 class="m-0 font-weight-bold text-info">- Nilai B = 70 - 72</h6>
+                <h6 class="m-0 font-weight-bold text-info">- Nilai B- = 68 - 69</h6>
+                <h6 class="m-0 font-weight-bold text-info">- Nilai C+ = 64 - 67</h6>
+                <h6 class="m-0 font-weight-bold text-info">- Nilai C = 60 - 63</h6>
+                <h6 class="m-0 font-weight-bold text-info">- Nilai C- = 55 - 59</h6>
+                <h6 class="m-0 font-weight-bold text-info">- Nilai D = 50 - 54</h6>
+                <h6 class="m-0 font-weight-bold text-info">- Nilai E = Nilai < 50</h6>
+            </div> -->
+            <div class="card-footer text-right">
+                <button name="simpan" type="submit" class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
+                <button type="reset" class="btn btn-info"><i class="fa fa-sync-alt"></i> Reset</button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<script>
     function setGapprm(){
         var n = document.getElementById("nilai_prm").value;
         var t = document.getElementById("target_prm").value;
@@ -314,7 +314,7 @@
         document.getElementById("selisih_prm").value = s;
         document.getElementById("nilai_bobot_prm").value = nb;
     }
-
+    
     function setGapfsl(){
         var n = document.getElementById("nilai_fsl").value;
         var t = document.getElementById("target_fsl").value;
@@ -327,7 +327,7 @@
         document.getElementById("selisih_fsl").value = s;
         document.getElementById("nilai_bobot_fsl").value = nb;
     }
-
+    
     function setGapbst(){
         var n = document.getElementById("nilai_bst").value;
         var t = document.getElementById("target_bst").value;
@@ -340,7 +340,7 @@
         document.getElementById("selisih_bst").value = s;
         document.getElementById("nilai_bobot_bst").value = nb;
     }
-
+    
     function setGappaskib(){
         var n = document.getElementById("nilai_paskib").value;
         var t = document.getElementById("target_paskib").value;
@@ -352,16 +352,16 @@
         }
         document.getElementById("selisih_paskib").value = s;
         document.getElementById("nilai_bobot_paskib").value = nb;
-
+        
         var pramuka = document.getElementById("nilai_bobot_prm").value;
         var futsal = document.getElementById("nilai_bobot_fsl").value;
         var basket = document.getElementById("nilai_bobot_bst").value;
         var paskib = document.getElementById("nilai_bobot_paskib").value;
-
+        
         var cf = (parseFloat(paskib) + parseFloat(pramuka)) / 2;
         var sf = (parseFloat(futsal) + parseFloat(basket)) / 2;
         var nt = (cf * 0.6) + (sf * 0.4);
-
+        
         document.getElementById("nilai_cf_A4").value  = cf;
         document.getElementById("nilai_sf_A4").value  = sf;
         document.getElementById("nilai_tot_A4").value = nt;
