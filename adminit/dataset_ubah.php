@@ -41,9 +41,11 @@ $rows = $db->get_results("SELECT * FROM tb_dataset WHERE nomor='$_GET[ID]' ORDER
                                 <?php endif ?>
                             </div>
                                 <?php endforeach ?>
-                                    <div class="form-group">
-                                        <button class="btn btn-primary"><span class="glyphicon glyphicon-save"></span> Simpan</button>
-                                        <a class="btn btn-danger" href="?m=dataset"><span class="glyphicon glyphicon-arrow-left"></span> Kembali</a>
+                            <div class="form-group">
+                                <button class="btn btn-primary"><span class="glyphicon glyphicon-save"></span>
+                                Simpan
+                                </button>
+                            <a class="btn btn-danger" href="?m=dataset"><span class="glyphicon glyphicon-arrow-left"></span> Kembali</a>
                         </div>
                     </form>
                 </div>

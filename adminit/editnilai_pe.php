@@ -1,55 +1,56 @@
 
 <?php
-        $kdnilai1 = $_GET['kdnilai1'];
-        require_once "database.php";
-        $db = new database();
-        $kon = $db->connect();
-        $query = $kon->query("SELECT * FROM pm_penilaian where kdnilai1='$kdnilai1'");
-        while ($row = $query->fetch_array()) {
-            $kdnilai1       = $row['kdnilai1'];
-            $angkatan      = $row['angkatan'];
-            $id_user      = $row['id_user'];
+    $kdnilai1 = $_GET['kdnilai1'];
+    require_once "database.php";
+    $db = new database();
+    $kon = $db->connect();
+    $query = $kon->query("SELECT * FROM pm_penilaian where kdnilai1='$kdnilai1'");
+    while ($row = $query->fetch_array()) {
+        $kdnilai1       = $row['kdnilai1'];
+        $angkatan      = $row['angkatan'];
+        $id_user      = $row['id_user'];
             
-            $nilai_ips       = $row['nilai_ips'];
-            $target_ips      = $row['target_ips'];
-            $selisih_ips     = $row['selisih_ips'];
-            $nilai_bobot_ips = $row['nilai_bobot_ips'];
+        $nilai_ips       = $row['nilai_ips'];
+        $target_ips      = $row['target_ips'];
+        $selisih_ips     = $row['selisih_ips'];
+        $nilai_bobot_ips = $row['nilai_bobot_ips'];
             
-            $nilai_ipa       = $row['nilai_ipa'];
-            $target_ipa      = $row['target_ipa'];
-            $selisih_ipa     = $row['selisih_ipa'];
-            $nilai_bobot_ipa = $row['nilai_bobot_ipa'];
+        $nilai_ipa       = $row['nilai_ipa'];
+        $target_ipa      = $row['target_ipa'];
+        $selisih_ipa     = $row['selisih_ipa'];
+        $nilai_bobot_ipa = $row['nilai_bobot_ipa'];
             
-            $nilai_pkn       = $row['nilai_pkn'];
-            $target_pkn      = $row['target_pkn'];
-            $selisih_pkn     = $row['selisih_pkn'];
-            $nilai_bobot_pkn = $row['nilai_bobot_pkn'];
+        $nilai_pkn       = $row['nilai_pkn'];
+        $target_pkn      = $row['target_pkn'];
+        $selisih_pkn     = $row['selisih_pkn'];
+        $nilai_bobot_pkn = $row['nilai_bobot_pkn'];
             
-            $nilai_bind       = $row['nilai_bind'];
-            $target_bind      = $row['target_bind'];
-            $selisih_bind     = $row['selisih_bind'];
-            $nilai_bobot_bind = $row['nilai_bobot_bind'];
+        $nilai_bind       = $row['nilai_bind'];
+        $target_bind      = $row['target_bind'];
+        $selisih_bind     = $row['selisih_bind'];
+        $nilai_bobot_bind = $row['nilai_bobot_bind'];
             
-            $nilai_mtk       = $row['nilai_mtk'];
-            $target_mtk      = $row['target_mtk'];
-            $selisih_mtk     = $row['selisih_mtk'];
-            $nilai_bobot_mtk = $row['nilai_bobot_mtk'];
+        $nilai_mtk       = $row['nilai_mtk'];
+        $target_mtk      = $row['target_mtk'];
+        $selisih_mtk     = $row['selisih_mtk'];
+        $nilai_bobot_mtk = $row['nilai_bobot_mtk'];
             
-            $nilai_bing       = $row['nilai_bing'];
-            $target_bing      = $row['target_bing'];
-            $selisih_bing     = $row['selisih_bing'];
-            $nilai_bobot_bing = $row['nilai_bobot_bing'];
+        $nilai_bing       = $row['nilai_bing'];
+        $target_bing      = $row['target_bing'];
+        $selisih_bing     = $row['selisih_bing'];
+        $nilai_bobot_bing = $row['nilai_bobot_bing'];
             
-            $nilai_rrt       = $row['nilai_rrt'];
-            $target_rrt      = $row['target_rrt'];
-            $selisih_rrt     = $row['selisih_rrt'];
-            $nilai_bobot_rrt = $row['nilai_bobot_rrt'];
+        $nilai_rrt       = $row['nilai_rrt'];
+        $target_rrt      = $row['target_rrt'];
+        $selisih_rrt     = $row['selisih_rrt'];
+        $nilai_bobot_rrt = $row['nilai_bobot_rrt'];
             
-            $nilai_cf_A1    = $row['nilai_cf_A1'];
-            $nilai_sf_A1    = $row['nilai_sf_A1'];
-            $nilai_tot_A1   = $row['nilai_tot_A1'];
-        }
-        ?>
+        $nilai_cf_A1    = $row['nilai_cf_A1'];
+        $nilai_sf_A1    = $row['nilai_sf_A1'];
+        $nilai_tot_A1   = $row['nilai_tot_A1'];
+    }
+?>
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
@@ -65,168 +66,167 @@
                     <form method="POST" action="?m=prosesnilai_pe">
                         <div class="card-body">
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label font-weight-bold">Angkatan </label>
+                                <label class="col-sm-2 col-form-label font-weight-bold"> 
+                                    Angkatan 
+                                </label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" readonly value="<?php echo $angkatan; ?>" name="kdnilai1" id="kdnilai1" />
-                                    
                                     <!-- <?php $years = range(2020, strftime("%Y", time())); ?>
                                     <select class="form-control" name="angkatan" readonly required>
-                                        <option value="">--Pilih Angkatan--</option>
-                                        <?php foreach($years as $year) : ?>
-                                            <option value="<?php echo $year; ?>"><?php echo $angkatan; ?></option>
-                                            <?php endforeach; ?>
-                                        </select> -->
+                                    <option value="">--Pilih Angkatan--</option>
+                                    <?php foreach($years as $year) : ?>
+                                    <option value="<?php echo $year; ?>"><?php echo $angkatan; ?></option>
+                                    <?php endforeach; ?>
+                                    </select> -->
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label font-weight-bold"> 
+                                    Nama Siswa 
+                                </label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" name="id_user" readonly required>
+                                        <!-- <option value="">--Pilih Siswa--</option> -->
+                                        <?php
+                                            require_once "database.php";
+                                            $db  = new database();
+                                            $kon = $db->connect(); $qcek = $kon->query("select * from user WHERE id_user = '$id_user'"); 
+                                            while ($row = $qcek->fetch_array()) {echo"<option value='".$row['id_user']."'>".$row['nis']." |".$row['nama_lengkap']." | ".$row['angkatan']."</option>";} 
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Ilmu Pengetahuan Sosial -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold"> 
+                                            Ilmu Pengetahuan Sosial 
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" readonly value="<?php echo $nilai_ips; ?>" name="kdnilai1" id="kdnilai1" />
+                                            <!-- <input type="number" class="form-control" name="nilai_ips" id="nilai_ips" required> -->
+                                            <!-- <select class="form-control" name="nilai_ips" id="nilai_ips" required>
+                                                <option value="">--Pilih Nilai--</option>
+                                                <option value="10">A</option>
+                                                <option value="9">A-</option>
+                                                <option value="8">B+</option>
+                                                <option value="7">B</option>
+                                                <option value="6">B-</option>
+                                                <option value="5">C+</option>
+                                                <option value="4">C</option>
+                                                <option value="3">C-</option>
+                                                <option value="2">D</option>
+                                                <option value="1">E</option>
+                                            </select> -->
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label font-weight-bold">Nama Siswa </label>
-                                    <div class="col-sm-10">
-                                        <select class="form-control" name="id_user" readonly required>
-                                            <!-- <option value="">--Pilih Siswa--</option> -->
-                                            <?php
-                            require_once "database.php";
-                            $db  = new database();
-                            $kon = $db->connect(); $qcek = $kon->query("select * from user WHERE id_user = '$id_user'"); 
-							while ($row = $qcek->fetch_array()) {echo"<option value='".$row['id_user']."'>".$row['nis']." |".$row['nama_lengkap']." | ".$row['angkatan']."</option>";} 
-                            ?>
-                    </select>
-                </div>
-            </div>
-            
-            <!-- Ilmu Pengetahuan Sosial -->
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">Ilmu Pengetahuan Sosial</label>
-                        <div class="col-sm-6">
-                            <input type="text" class="form-control" readonly value="<?php echo $nilai_ips; ?>" name="kdnilai1" id="kdnilai1" />
-                            
-                            <!-- <input type="number" class="form-control" name="nilai_ips" id="nilai_ips" required> -->
-                            <!-- <select class="form-control" name="nilai_ips" id="nilai_ips" required>
-                                <option value="">--Pilih Nilai--</option>
-                                <option value="10">A</option>
-                                <option value="9">A-</option>
-                                <option value="8">B+</option>
-                                <option value="7">B</option>
-                                    <option value="6">B-</option>
-                                    <option value="5">C+</option>
-                                    <option value="4">C</option>
-                                    <option value="3">C-</option>
-                                    <option value="2">D</option>
-                                    <option value="1">E</option>
-                                </select> -->
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-4">
-                        <div class="form-group row">
-                            <label class="col-sm-6 col-form-label font-weight-bold">Nilai Target</label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" readonly value="<?php echo $target_ips; ?>" name="kdnilai1" id="kdnilai1" />
-                                
-                                <!-- <select class="form-control" name="target_ips" oninput="setGapips()" id="target_ips" required>
-                                    <option value="">--Pilih Nilai--</option>
-                                    <?php
-                                    require_once "database.php";
-                                    $db  = new database();
-                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='IPS'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
-                                    ?>
-                            </select> -->
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-2">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">GAP</label>
-                        <div class="col-sm-6">
-                            <!-- <input type="text" class="form-control" name="selisih_ips" id="selisih_ips" readonly /> -->
-                            <input type="text" class="form-control" readonly value="<?php echo $selisih_ips; ?>" name="kdnilai1" id="kdnilai1" />
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-2">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">Bobot</label>
-                        <div class="col-sm-6">
-                            <input type="text" class="form-control" readonly value="<?php echo $nilai_bobot_ips; ?>" name="kdnilai1" id="kdnilai1" />
-                            
-                            <!-- <input type="text" class="form-control" name="nilai_bobot_ips" id="nilai_bobot_ips" readonly /> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Ilmu Pengetahuan Sosial -->
-            <!-- Ilmu Pengetahuan Alam	 -->
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">Ilmu Pengetahuan Alam</label>
-                        <div class="col-sm-6">
-                            <!-- <input type="number" class="form-control" name="nilai_ipa" id="nilai_ipa" required> -->
-                            <!-- <select class="form-control" name="nilai_ipa" id="nilai_ipa" required>
-                                <option value="">--Pilih Nilai--</option>
-                                <option value="10">A</option>
-                                <option value="9">A-</option>
-                                <option value="8">B+</option>
-                                <option value="7">B</option>
-                                <option value="6">B-</option>
-                                <option value="5">C+</option>
-                                <option value="4">C</option>
-                                <option value="3">C-</option>
-                                    <option value="2">D</option>
-                                    <option value="1">E</option>
-								</select> -->
-                                <input type="text" class="form-control" readonly value="<?php echo $nilai_ipa; ?>" name="kdnilai1" id="kdnilai1" />
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-4">
-                        <div class="form-group row">
-                            <label class="col-sm-6 col-form-label font-weight-bold">Nilai Target</label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" readonly value="<?php echo $target_ipa; ?>" name="kdnilai1" id="kdnilai1" />
-                                
-                                <!-- <select class="form-control" name="target_ipa" oninput="setGapipa()" id="target_ipa" required>
-                                    <option value="">--Pilih Nilai--</option>
-                                    <?php
-                                    require_once "database.php";
-                                    $db  = new database();
-                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='IPA'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
-                                    ?>
-                            </select> -->
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-md-2">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">GAP</label>
-                        <div class="col-sm-6">
-                            <!-- <input type="text" class="form-control" name="selisih_ipa" id="selisih_ipa" readonly /> -->
-                            <input type="text" class="form-control" readonly value="<?php echo $selisih_ipa; ?>" name="kdnilai1" id="kdnilai1" />
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-2">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">Bobot</label>
-                        <div class="col-sm-6">
-                            <input type="text" class="form-control" readonly value="<?php echo $nilai_bobot_ipa; ?>" name="kdnilai1" id="kdnilai1" />
-                            
-                            <!-- <input type="text" class="form-control" name="nilai_bobot_ipa" id="nilai_bobot_ipa" readonly /> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Ilmu Pengetahuan Alam	 -->
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold"> 
+                                            Nilai Target
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" readonly value="<?php echo $target_ips; ?>" name="kdnilai1" id="kdnilai1" />
+                                            <!-- <select class="form-control" name="target_ips" oninput="setGapips()" id="target_ips" required>
+                                            <option value="">--Pilih Nilai--</option>
+                                            <?php
+                                                require_once "database.php";
+                                                $db  = new database();
+                                                $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='IPS'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
+                                            ?>
+                                            </select> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">
+                                            GAP
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <!-- <input type="text" class="form-control" name="selisih_ips" id="selisih_ips" readonly /> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $selisih_ips; ?>" name="kdnilai1" id="kdnilai1" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">Bobot</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" readonly value="<?php echo $nilai_bobot_ips; ?>" name="kdnilai1" id="kdnilai1" />
+                                            <!-- <input type="text" class="form-control" name="nilai_bobot_ips" id="nilai_bobot_ips" readonly /> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Ilmu Pengetahuan Sosial -->
+                            <!-- Ilmu Pengetahuan Alam	 -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">
+                                            Ilmu Pengetahuan Alam
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <!-- <input type="number" class="form-control" name="nilai_ipa" id="nilai_ipa" required> -->
+                                            <!-- <select class="form-control" name="nilai_ipa" id="nilai_ipa" required>
+                                                <option value="">--Pilih Nilai--</option>
+                                                <option value="10">A</option>
+                                                <option value="9">A-</option>
+                                                <option value="8">B+</option>
+                                                <option value="7">B</option>
+                                                <option value="6">B-</option>
+                                                <option value="5">C+</option>
+                                                <option value="4">C</option>
+                                                <option value="3">C-</option>
+                                                <option value="2">D</option>
+                                                <option value="1">E</option>
+                                            </select> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $nilai_ipa; ?>" name="kdnilai1" id="kdnilai1" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">Nilai Target</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" readonly value="<?php echo $target_ipa; ?>" name="kdnilai1" id="kdnilai1" />
+                                            <!-- <select class="form-control" name="target_ipa" oninput="setGapipa()" id="target_ipa" required>
+                                            <option value="">--Pilih Nilai--</option>
+                                            <?php
+                                                require_once "database.php";
+                                                $db  = new database();
+                                                $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='IPA'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
+                                            ?>
+                                            </select> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">GAP</label>
+                                        <div class="col-sm-6">
+                                            <!-- <input type="text" class="form-control" name="selisih_ipa" id="selisih_ipa" readonly /> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $selisih_ipa; ?>" name="kdnilai1" id="kdnilai1" />
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">Bobot</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" readonly value="<?php echo $nilai_bobot_ipa; ?>" name="kdnilai1" id="kdnilai1" />
+                                            <!-- <input type="text" class="form-control" name="nilai_bobot_ipa" id="nilai_bobot_ipa" readonly /> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Ilmu Pengetahuan Alam	 -->
             <!-- Pendidikan Kewarganegaraan -->
             <div class="row">
                 <div class="col-md-4">
@@ -244,9 +244,9 @@
                                 <option value="5">C+</option>
                                 <option value="4">C</option>
                                 <option value="3">C-</option>
-                                    <option value="2">D</option>
-                                    <option value="1">E</option>
-                                </select> -->
+                                <option value="2">D</option>
+                                <option value="1">E</option>
+                            </select> -->
                                 <input type="text" class="form-control" readonly value="<?php echo $nilai_pkn; ?>" name="kdnilai1" id="kdnilai1" />
                                 
                             </div>
@@ -333,7 +333,6 @@
                                     ?>
                             </select> -->
                             <input type="text" class="form-control" readonly value="<?php echo $target_bind; ?>" name="kdnilai1" id="kdnilai1" />
-
                         </div>
                     </div>
                 </div>

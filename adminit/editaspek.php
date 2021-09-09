@@ -12,6 +12,7 @@ while ($row = $query->fetch_array()) {
     $bobotsecondary = $row['bobot_secondary'];
 }
 ?>
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
