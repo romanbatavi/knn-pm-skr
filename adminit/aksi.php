@@ -4,13 +4,13 @@ require_once 'functions.php';
 if ($mod == 'dataset_tambah') {
     $nomor = $_POST['nomor'];
     $ket_dataset = $_POST['ket_dataset'];
-
+    
     $error = false;
     foreach ($_POST['nilai'] as $key => $val) {
         if (!$val)
-            $error = true;
+        $error = true;
     }
-
+    
     if ($error) {
         print_msg("Field yang bertanda * tidak boleh kosong!");
     } elseif ($db->get_row("SELECT * FROM tb_dataset WHERE nomor='$nomor'")) {
@@ -26,9 +26,9 @@ if ($mod == 'dataset_tambah') {
     $error = false;
     foreach ($_POST['nilai'] as $key => $val) {
         if (!$val)
-            $error = true;
+        $error = true;
     }
-
+    
     if ($error) {
         print_msg("Field yang bertanda * tidak boleh kosong!");
     } else {
@@ -46,9 +46,9 @@ if ($mod == 'dataset_tambah') {
 elseif ($mod == 'nilai_tambah') {
     $id_atribut = $_POST['id_atribut'];
     $nama_nilai = $_POST['nama_nilai'];
-
+    
     if (!$id_atribut || !$nama_nilai)
-        print_msg("Field yang bertanda * tidak boleh kosong!");
+    print_msg("Field yang bertanda * tidak boleh kosong!");
     else {
         $db->query("INSERT INTO tb_nilai (id_atribut, nama_nilai) VALUES ('$id_atribut', '$nama_nilai')");
         redirect_js("index.php?m=nilai");
@@ -56,9 +56,9 @@ elseif ($mod == 'nilai_tambah') {
 } else if ($mod == 'nilai_ubah') {
     $id_atribut = $_POST['id_atribut'];
     $nama_nilai = $_POST['nama_nilai'];
-
+    
     if (!$id_atribut || !$nama_nilai)
-        print_msg("Field yang bertanda * tidak boleh kosong!");
+    print_msg("Field yang bertanda * tidak boleh kosong!");
     else {
         $db->query("UPDATE tb_nilai SET id_atribut='$id_atribut', nama_nilai='$nama_nilai' WHERE id_nilai='$_GET[ID]'");
         redirect_js("index.php?m=nilai");
@@ -75,11 +75,11 @@ if ($mod == 'atribut_tambah') {
     $id_atribut = $_POST['id_atribut'];
     $nama_atribut = $_POST['nama_atribut'];
     $keterangan = $_POST['keterangan'];
-
+    
     if (!$id_atribut || !$nama_atribut)
-        print_msg("Field bertanda * tidak boleh kosong!");
+    print_msg("Field bertanda * tidak boleh kosong!");
     elseif ($db->get_results("SELECT * FROM tb_atribut WHERE id_atribut='$id_atribut'"))
-        print_msg("Kode sudah ada!");
+    print_msg("Kode sudah ada!");
     else {
         $db->query("INSERT INTO tb_atribut (id_atribut, nama_atribut, keterangan) 
             VALUES ('$id_atribut', '$nama_atribut', '$keterangan')");
@@ -90,9 +90,9 @@ if ($mod == 'atribut_tambah') {
     $id_atribut = $_POST['id_atribut'];
     $nama_atribut = $_POST['nama_atribut'];
     $keterangan = $_POST['keterangan'];
-
+    
     if (!$id_atribut || !$nama_atribut)
-        print_msg("Field bertanda * tidak boleh kosong!");
+    print_msg("Field bertanda * tidak boleh kosong!");
     else {
         $db->query("UPDATE tb_atribut SET nama_atribut='$nama_atribut', keterangan='$keterangan' WHERE id_atribut='$_GET[ID]'");
         redirect_js("index.php?m=atribut");
@@ -114,15 +114,15 @@ if ($mod == 'lowongan_tambah') {
     $ket_lowongan = $_POST['ket_lowongan'];
     $tanggal_buat = $_POST['tanggal_buat'];
     $expired = $_POST['expired'];
-
+    
     if (!$nama_lowongan || !$email_lowongan)
-        print_msg("Field bertanda * tidak boleh kosong!");
+    print_msg("Field bertanda * tidak boleh kosong!");
     else {
         $db->query("INSERT INTO tbl_lowongan (id_user, nama_lowongan, alamat_lowongan, email_lowongan, no_lowongan, ket_lowongan, tanggal_buat, expired) 
             VALUES ('$id_user', '$nama_lowongan', '$alamat_lowongan', '$email_lowongan', '$no_lowongan', '$ket_lowongan', '$tanggal_buat', '$expired')");
         redirect_js("index.php?m=lowongan");
     }
-
+    
 } else if ($act == 'lowongan_hapus') {
     $db->query("DELETE FROM tbl_lowongan WHERE id_lowongan='$_GET[ID]'");
     header("location:index.php?m=lowongan");
