@@ -19,51 +19,51 @@ require_once "class/prestasi.php";
 $prestasi = new prestasi();
 ?>
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-12">
-      <div class="portlet">
-        <div class="portlet-header portlet-header-bordered">
-          <h3 class="portlet-title">Data Hasil Akhir</h3>
-        </div>
-        <div class="portlet-body">
-          <!-- <p>
-            In this example you can see Datatable doing both horizontal and vertical scrolling at the same time. To enable y-scrolling or x-scrolling simply set the <code>scrollY|scrollX</code> parameter to be whatever you want the container wrapper's height or width.
-          </p>
-          <hr> -->
-          <div class="card shadow mb-4">
-            <!-- /.card-header -->
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-info"><i class="fa fa-table"></i> Hasil Aspek Penilaian</h6>
-            </div>
-            
-            <div class="card-body">
-              <h5 class="card-title">Tabel Nilai Kriteria Penilaian</h5>
-              <?php
-        $penilaian->tampil();
-        ?>
+    <div class="row">
+        <div class="col-12">
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Data Hasil Akhir</h3>
+                </div>
+                <div class="portlet-body">
+                    <!-- <p>
+                        In this example you can see Datatable doing both horizontal and vertical scrolling at the same time. To enable y-scrolling or x-scrolling simply set the <code>scrollY|scrollX</code> parameter to be whatever you want the container wrapper's height or width.
+                    </p>
+                    <hr> -->
+                    <div class="card shadow mb-4">
+                        <!-- /.card-header -->
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-info"><i class="fa fa-table"></i> Hasil Aspek Penilaian</h6>
+                        </div>
+                        
+                        <div class="card-body">
+                            <h5 class="card-title">Tabel Nilai Kriteria Penilaian</h5>
+                            <?php
+                                $penilaian->tampil();
+                            ?>
 		
-		<h5 class="card-title mt-4">Tabel Pemetaan GAP</h5>
-		<?php
-        $penilaian->selisih();
-        ?>
-		
-		<h5 class="card-title mt-4">Tabel Pembobotan Nilai GAP dan Perhitungan Factor</h5>
-		<?php
-        $penilaian->factor();
-        ?>
-    </div>
-  </div>
-  <div class="card shadow mb-4">
-    <!-- /.card-header -->
-    <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-info"><i class="fa fa-table"></i> Hasil Aspek Kemampuan</h6>
-    </div>
-    
-    <div class="card-body">
-      <h5 class="card-title">Tabel Nilai Kriteria Penilaian</h5>
-      <?php
-        $kemampuan->tampil();
-        ?>
+                            <h5 class="card-title mt-4">Tabel Pemetaan GAP</h5>
+                            <?php
+                                $penilaian->selisih();
+                            ?>
+
+                            <h5 class="card-title mt-4">Tabel Pembobotan Nilai GAP dan Perhitungan Factor</h5>
+                            <?php
+                                $penilaian->factor();
+                            ?>
+                        </div>
+                    </div>
+                    <div class="card shadow mb-4">
+                        <!-- /.card-header -->
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-info"><i class="fa fa-table"></i> Hasil Aspek Kemampuan</h6>
+                        </div>
+                        
+                        <div class="card-body">
+                            <h5 class="card-title">Tabel Nilai Kriteria Penilaian</h5>
+                            <?php
+                                $kemampuan->tampil();
+                            ?>
 		
 		<h5 class="card-title mt-4">Tabel Pemetaan GAP</h5>
 		<?php
