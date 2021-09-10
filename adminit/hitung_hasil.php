@@ -94,32 +94,33 @@ $knn = new KNN($dataset, $TARGET, $_POST['nilai'], $nilai_k);
         </table>
     </div>
 </div>
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Total</h3>
-                </div>
-                <div class="table-responsive">
-                    <table id="datatable-1" class="table table-bordered table-striped table-hover nowrap">
-                        <thead class="nw">
-                            <tr>
-                                <th><?= $ATRIBUT[$TARGET]->nama_atribut ?></th>
-                                <th>Total</th>
-                            </tr>
-                        </thead>
-                        <?php foreach ($knn->total as $key => $val) : ?>
-                            <tr>
-                                <td><?= $NILAI[$key]->nama_nilai ?></td>
-                                <td><?= $val ?></td>
-                            </tr>
-                            <?php endforeach ?>
-                        </table>
-                    </div>
-                </div>
-                <?php
-$str = array();
-foreach ($_POST['nilai'] as $key => $val) {
-    $nama = ($ATRIBUT_NILAI[$key]) ? $NILAI[$val]->nama_nilai : $val;
-    $str[] = '' . $ATRIBUT[$key]->nama_atribut . ': <strong>' . $nama . '</strong>';
-}
-?>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Total</h3>
+    </div>
+    <div class="table-responsive">
+        <table id="datatable-1" class="table table-bordered table-striped table-hover nowrap">
+            <thead class="nw">
+                <tr>
+                    <th><?= $ATRIBUT[$TARGET]->nama_atribut ?></th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+                    <?php foreach ($knn->total as $key => $val) : ?>
+                <tr>
+                    <td><?= $NILAI[$key]->nama_nilai ?></td>
+                    <td><?= $val ?></td>
+                </tr>
+                    <?php endforeach ?>
+        </table>
+    </div>
+</div>
+                    <?php
+                        $str = array();
+                        foreach ($_POST['nilai'] as $key => $val) {
+                        $nama = ($ATRIBUT_NILAI[$key]) ? $NILAI[$val]->nama_nilai : $val;
+                        $str[] = '' . $ATRIBUT[$key]->nama_atribut . ': <strong>' . $nama . '</strong>';
+                        }
+                    ?>
 <p>Berdasarkan perhitungan, dengan <?= implode(', ', $str) ?>, maka hasilnya: <strong><?= $NILAI[$knn->hasil]->nama_nilai ?></strong>.</p>
