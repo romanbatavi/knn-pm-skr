@@ -96,6 +96,7 @@
                                     </select>
                                 </div>
                             </div>
+
                             <!-- Ilmu Pengetahuan Sosial -->
                             <div class="row">
                                 <div class="col-md-4">
@@ -153,6 +154,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-md-2">
                                     <div class="form-group row">
                                         <label class="col-sm-6 col-form-label font-weight-bold">Bobot</label>
@@ -164,6 +166,7 @@
                                 </div>
                             </div>
                             <!-- Ilmu Pengetahuan Sosial -->
+
                             <!-- Ilmu Pengetahuan Alam	 -->
                             <div class="row">
                                 <div class="col-md-4">
@@ -190,6 +193,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-md-4">
                                     <div class="form-group row">
                                         <label class="col-sm-6 col-form-label font-weight-bold">Nilai Target</label>
@@ -206,6 +210,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-md-2">
                                     <div class="form-group row">
                                         <label class="col-sm-6 col-form-label font-weight-bold">GAP</label>
@@ -216,6 +221,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-md-2">
                                     <div class="form-group row">
                                         <label class="col-sm-6 col-form-label font-weight-bold">Bobot</label>
@@ -226,400 +232,397 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Ilmu Pengetahuan Alam	 -->
-            <!-- Pendidikan Kewarganegaraan -->
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">Pendidikan Kewarganegaraan</label>
-                        <div class="col-sm-6">
-                            <!-- <input type="number" class="form-control" name="nilai_pkn" id="nilai_pkn" required> -->
-							<!-- <select class="form-control" name="nilai_pkn" id="nilai_pkn" required>
-                                <option value="">--Pilih Nilai--</option>
-								<option value="10">A</option>
-                                <option value="9">A-</option>
-                                <option value="8">B+</option>
-                                <option value="7">B</option>
-                                <option value="6">B-</option>
-                                <option value="5">C+</option>
-                                <option value="4">C</option>
-                                <option value="3">C-</option>
-                                <option value="2">D</option>
-                                <option value="1">E</option>
-                            </select> -->
-                                <input type="text" class="form-control" readonly value="<?php echo $nilai_pkn; ?>" name="kdnilai1" id="kdnilai1" />
+                            <!-- Ilmu Pengetahuan Alam	-->
+
+                            <!-- Pendidikan Kewarganegaraan -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">Pendidikan Kewarganegaraan</label>
+                                        <div class="col-sm-6">
+                                            <!-- <input type="number" class="form-control" name="nilai_pkn" id="nilai_pkn" required> -->
+                                            <!-- <select class="form-control" name="nilai_pkn" id="nilai_pkn" required>
+                                                <option value="">--Pilih Nilai--</option>
+                                                <option value="10">A</option>
+                                                <option value="9">A-</option>
+                                                <option value="8">B+</option>
+                                                <option value="7">B</option>
+                                                <option value="6">B-</option>
+                                                <option value="5">C+</option>
+                                                <option value="4">C</option>
+                                                <option value="3">C-</option>
+                                                <option value="2">D</option>
+                                                <option value="1">E</option>
+                                            </select> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $nilai_pkn; ?>" name="kdnilai1" id="kdnilai1" />
+                                        </div>
+                                    </div>
+                                </div>
                                 
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">Nilai Target</label>
+                                        <div class="col-sm-6">
+                                            <!-- <select class="form-control" name="target_pkn" oninput="setGappkn()" id="target_pkn" required>
+                                                <option value="">--Pilih Nilai--</option>
+                                                <?php
+                                                    require_once "database.php";
+                                                    $db  = new database();
+                                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='PKN'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
+                                                ?>
+                                            </select> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $target_ipa; ?>" name="kdnilai1" id="kdnilai1" />
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">GAP</label>
+                                        <div class="col-sm-6">
+                                            <!-- <input type="text" class="form-control" name="selisih_pkn" id="selisih_pkn" readonly /> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $selisih_pkn; ?>" name="kdnilai1" id="kdnilai1" />
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">Bobot</label>
+                                        <div class="col-sm-6">
+                                            <!-- <input type="text" class="form-control" name="nilai_bobot_pkn" id="nilai_bobot_pkn" readonly /> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $nilai_bobot_pkn; ?>" name="kdnilai1" id="kdnilai1" />
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Pendidikan Kewarganegaraan -->
+
+                            <!-- Bahasa Indonesia -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">Bahasa Indonesia</label>
+                                        <div class="col-sm-6">
+                                            <!-- <input type="number" class="form-control" name="nilai_bind" id="nilai_bind" required> -->
+                                            <!-- <select class="form-control" name="nilai_bind" id="nilai_bind" required>
+                                                <option value="">--Pilih Nilai--</option>
+                                                <option value="10">A</option>
+                                                <option value="9">A-</option>
+                                                <option value="8">B+</option>
+                                                <option value="7">B</option>
+                                                <option value="6">B-</option>
+                                                <option value="5">C+</option>
+                                                <option value="4">C</option>
+                                                <option value="3">C-</option>
+                                                <option value="2">D</option>
+                                                <option value="1">E</option>
+                                            </select> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $nilai_bind; ?>" name="kdnilai1" id="kdnilai1" />
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">Nilai Target</label>
+                                        <div class="col-sm-6">
+                                            <!-- <select class="form-control" name="target_bind" class="form-control" oninput="setGapbind()" id="target_bind" required>
+                                                <option value="">--Pilih Nilai--</option>
+                                                <?php
+                                                    require_once "database.php";
+                                                    $db  = new database();
+                                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='BIND'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
+                                                ?>
+                                            </select> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $target_bind; ?>" name="kdnilai1" id="kdnilai1" />
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-2">
+                                    <div class="form-group row">            
+                                        <label class="col-sm-6 col-form-label font-weight-bold">GAP</label>
+                                        <div class="col-sm-6">
+                                            <!-- <input type="text" class="form-control" name="selisih_bind" id="selisih_bind" readonly /> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $selisih_bind; ?>" name="kdnilai1" id="kdnilai1" />
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">Bobot</label>
+                                        <div class="col-sm-6">
+                                            <!-- <input type="text" class="form-control" name="nilai_bobot_bind" id="nilai_bobot_bind" readonly /> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $nilai_bobot_bind; ?>" name="kdnilai1" id="kdnilai1" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Bahasa Indonesia -->
+
+                            <!-- Matematika -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">Matematika</label>
+                                        <div class="col-sm-6">
+                                            <!-- <input type="number" class="form-control" name="nilai_mtk" id="nilai_mtk" required> -->
+                                            <!-- <select class="form-control" name="nilai_mtk" id="nilai_mtk" required>
+                                                <option value="">--Pilih Nilai--</option>
+                                                <option value="10">A</option>
+                                                <option value="9">A-</option>
+                                                <option value="8">B+</option>
+                                                <option value="7">B</option>
+                                                <option value="6">B-</option>
+                                                <option value="5">C+</option>
+                                                <option value="4">C</option>
+                                                <option value="3">C-</option>
+                                                <option value="2">D</option>
+                                                <option value="1">E</option>
+                                            </select> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $nilai_mtk; ?>" name="kdnilai1" id="kdnilai1" />
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">Nilai Target</label>
+                                        <div class="col-sm-6">
+                                            <!-- <select class="form-control" name="target_mtk" oninput="setGapmtk()" id="target_mtk" required>
+                                                <option value="">--Pilih Nilai--</option>
+                                                <?php
+                                                    require_once "database.php";
+                                                    $db  = new database();
+                                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='MTK'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
+                                                ?>
+                                            </select> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $target_mtk; ?>" name="kdnilai1" id="kdnilai1" />
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">GAP</label>
+                                        <div class="col-sm-6">
+                                            <!-- <input type="text" class="form-control" name="selisih_mtk" id="selisih_mtk" readonly /> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $selisih_mtk; ?>" name="kdnilai1" id="kdnilai1" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">Bobot</label>
+                                        <div class="col-sm-6">
+                                            <!-- <input type="text" class="form-control" name="nilai_bobot_mtk" id="nilai_bobot_mtk" readonly /> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $nilai_bobot_mtk; ?>" name="kdnilai1" id="kdnilai1" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Matematika -->
+
+                            <!-- Bahasa Inggris	 -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">Bahasa Inggris</label>
+                                        <div class="col-sm-6">
+                                            <!-- <input type="number" class="form-control" name="nilai_bing" id="nilai_bing" required> -->
+                                            <!-- <select class="form-control" name="nilai_bing" id="nilai_bing" required>
+                                                <option value="">--Pilih Nilai--</option>
+                                                <option value="10">A</option>
+                                                <option value="9">A-</option>
+                                                <option value="8">B+</option>
+                                                <option value="7">B</option>
+                                                <option value="6">B-</option>
+                                                <option value="5">C+</option>
+                                                <option value="4">C</option>
+                                                <option value="3">C-</option>
+                                                <option value="2">D</option>
+                                                <option value="1">E</option>
+                                            </select> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $nilai_bing; ?>" name="kdnilai1" id="kdnilai1" />
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">Nilai Target</label>
+                                        <div class="col-sm-6">
+                                            <!-- <select class="form-control" name="target_bing" oninput="setGapbing()" id="target_bing" required>
+                                                <option value="">--Pilih Nilai--</option>
+                                                <?php
+                                                    require_once "database.php";
+                                                    $db  = new database();
+                                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='BING'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
+                                                ?>
+                                            </select> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $target_bing; ?>" name="kdnilai1" id="kdnilai1" />
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">GAP</label>
+                                        <div class="col-sm-6">
+                                            <!-- <input type="text" class="form-control" name="selisih_bing" id="selisih_bing" readonly /> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $selisih_bing; ?>" name="kdnilai1" id="kdnilai1" />
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">Bobot</label>
+                                        <div class="col-sm-6">
+                                            <!-- <input type="text" class="form-control" name="nilai_bobot_bing" id="nilai_bobot_bing" readonly /> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $nilai_bobot_bing; ?>" name="kdnilai1" id="kdnilai1" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Bahasa Inggris	 -->
+
+                            <!-- Pend Agama Islam -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">Pend Agama Islam</label>
+                                        <div class="col-sm-6">
+                                            <!-- <input type="number" class="form-control" name="nilai_rrt" id="nilai_rrt" required> -->
+                                            <!-- <select class="form-control" name="nilai_rrt" id="nilai_rrt" required>
+                                                <option value="">--Pilih Nilai--</option>
+                                                <option value="10">A</option>
+                                                <option value="9">A-</option>
+                                                <option value="8">B+</option>
+                                                <option value="7">B</option>
+                                                <option value="6">B-</option>
+                                                <option value="5">C+</option>
+                                                <option value="4">C</option>
+                                                <option value="3">C-</option>
+                                                <option value="2">D</option>
+                                                <option value="1">E</option>
+                                            </select> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $nilai_rrt; ?>" name="kdnilai1" id="kdnilai1" />
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">Nilai Target</label>
+                                        <div class="col-sm-6">
+                                            <!-- <select class="form-control" name="target_rrt" oninput="setGaprrt()" id="target_rrt" required>
+                                                <option value="">--Pilih Nilai--</option>
+                                                <?php
+                                                    require_once "database.php";
+                                                    $db  = new database();
+                                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='RRT'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
+                                                ?>
+                                            </select> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $target_rrt; ?>" name="kdnilai1" id="kdnilai1" />
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">GAP</label>
+                                        <div class="col-sm-6">
+                                            <!-- <input type="text" class="form-control" name="selisih_rrt" id="selisih_rrt" readonly /> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $selisih_rrt; ?>" name="kdnilai1" id="kdnilai1" />
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">Bobot</label>
+                                        <div class="col-sm-6">
+                                            <!-- <input type="text" class="form-control" name="nilai_bobot_rrt" id="nilai_bobot_rrt" readonly /> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $nilai_bobot_rrt; ?>" name="kdnilai1" id="kdnilai1" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Pend Agama Islam -->
+
+                            <!-- Pembobotan Core Factor -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">Nilai Core Factor</label>
+                                        <div class="col-sm-6">
+                                            <!-- <input type="text" class="form-control" name="nilai_cf_A1" id="nilai_cf_A1" readonly /> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $nilai_cf_A1; ?>" name="kdnilai1" id="kdnilai1" />
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Pembobotan Core Factor -->
+                                
+                                <!-- Pembobotan Secondary Factor -->
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">Nilai Secondary Factor</label>
+                                        <div class="col-sm-6">
+                                            <!-- <input type="text" class="form-control" name="nilai_sf_A1" id="nilai_sf_A1" readonly /> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $nilai_sf_A1; ?>" name="kdnilai1" id="kdnilai1" />
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Pembobotan Secondary Factor -->
+
+                                <!-- Pembobotan Total -->
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 col-form-label font-weight-bold">Nilai Total</label>
+                                        <div class="col-sm-6">
+                                            <!-- <input type="text" class="form-control" name="nilai_tot_A1" id="nilai_tot_A1" readonly /> -->
+                                            <input type="text" class="form-control" readonly value="<?php echo $nilai_tot_A1; ?>" name="kdnilai1" id="kdnilai1" />
+                                            
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="col-md-4">
-                        <div class="form-group row">
-                            <label class="col-sm-6 col-form-label font-weight-bold">Nilai Target</label>
-                            <div class="col-sm-6">
-                                <!-- <select class="form-control" name="target_pkn" oninput="setGappkn()" id="target_pkn" required>
-                                    <option value="">--Pilih Nilai--</option>
-                                    <?php
-                                    require_once "database.php";
-                                    $db  = new database();
-                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='PKN'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
-                                    ?>
-                            </select> -->
-                            <input type="text" class="form-control" readonly value="<?php echo $target_ipa; ?>" name="kdnilai1" id="kdnilai1" />
-                            
-                        </div>
-                    </div>
-                </div>
+                        <!-- Pembobotan Total -->
 
-                <div class="col-md-2">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">GAP</label>
-                        <div class="col-sm-6">
-                            <!-- <input type="text" class="form-control" name="selisih_pkn" id="selisih_pkn" readonly /> -->
-                            <input type="text" class="form-control" readonly value="<?php echo $selisih_pkn; ?>" name="kdnilai1" id="kdnilai1" />
-                            
+                        <!-- Rasio Nilai -->
+                        <div class="card-footer text-left">
+                            <h6 class="m-0 font-weight-bold text-danger">Keterangan Rasio Nilai :</h6>
+                            <h6 class="m-0 font-weight-bold text-info">- Nilai A = 90 - 100</h6>
+                            <h6 class="m-0 font-weight-bold text-info">- Nilai A- = 80 - 89</h6>
+                            <h6 class="m-0 font-weight-bold text-info">- Nilai B+ = 73 - 75</h6>
+                            <h6 class="m-0 font-weight-bold text-info">- Nilai B = 70 - 72</h6>
+                            <h6 class="m-0 font-weight-bold text-info">- Nilai B- = 68 - 69</h6>
+                            <h6 class="m-0 font-weight-bold text-info">- Nilai C+ = 64 - 67</h6>
+                            <h6 class="m-0 font-weight-bold text-info">- Nilai C = 60 - 63</h6>
+                            <h6 class="m-0 font-weight-bold text-info">- Nilai C- = 55 - 59</h6>
+                            <h6 class="m-0 font-weight-bold text-info">- Nilai D = 50 - 54</h6>
+                            <h6 class="m-0 font-weight-bold text-info">- Nilai E = Nilai < 50</h6>
                         </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-2">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">Bobot</label>
-                        <div class="col-sm-6">
-                            <!-- <input type="text" class="form-control" name="nilai_bobot_pkn" id="nilai_bobot_pkn" readonly /> -->
-                            <input type="text" class="form-control" readonly value="<?php echo $nilai_bobot_pkn; ?>" name="kdnilai1" id="kdnilai1" />
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Pendidikan Kewarganegaraan -->
-            <!-- Bahasa Indonesia -->
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">Bahasa Indonesia</label>
-                        <div class="col-sm-6">
-                            <!-- <input type="number" class="form-control" name="nilai_bind" id="nilai_bind" required> -->
-							<!-- <select class="form-control" name="nilai_bind" id="nilai_bind" required>
-                                <option value="">--Pilih Nilai--</option>
-								<option value="10">A</option>
-                                <option value="9">A-</option>
-                                <option value="8">B+</option>
-                                <option value="7">B</option>
-                                <option value="6">B-</option>
-                                <option value="5">C+</option>
-                                <option value="4">C</option>
-                                <option value="3">C-</option>
-                                <option value="2">D</option>
-                                <option value="1">E</option>
-							</select> -->
-                            <input type="text" class="form-control" readonly value="<?php echo $nilai_bind; ?>" name="kdnilai1" id="kdnilai1" />
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">Nilai Target</label>
-                        <div class="col-sm-6">
-                            <!-- <select class="form-control" name="target_bind" class="form-control" oninput="setGapbind()" id="target_bind" required>
-                                <option value="">--Pilih Nilai--</option>
-								<?php
-                                    require_once "database.php";
-                                    $db  = new database();
-                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='BIND'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
-                                    ?>
-                            </select> -->
-                            <input type="text" class="form-control" readonly value="<?php echo $target_bind; ?>" name="kdnilai1" id="kdnilai1" />
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-2">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">GAP</label>
-                        <div class="col-sm-6">
-                            <!-- <input type="text" class="form-control" name="selisih_bind" id="selisih_bind" readonly /> -->
-                            <input type="text" class="form-control" readonly value="<?php echo $selisih_bind; ?>" name="kdnilai1" id="kdnilai1" />
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-2">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">Bobot</label>
-                        <div class="col-sm-6">
-                            <!-- <input type="text" class="form-control" name="nilai_bobot_bind" id="nilai_bobot_bind" readonly /> -->
-                            <input type="text" class="form-control" readonly value="<?php echo $nilai_bobot_bind; ?>" name="kdnilai1" id="kdnilai1" />
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Bahasa Indonesia -->
-            <!-- Matematika -->
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">Matematika</label>
-                        <div class="col-sm-6">
-                            <!-- <input type="number" class="form-control" name="nilai_mtk" id="nilai_mtk" required> -->
-							<!-- <select class="form-control" name="nilai_mtk" id="nilai_mtk" required>
-                                <option value="">--Pilih Nilai--</option>
-								<option value="10">A</option>
-                                <option value="9">A-</option>
-                                <option value="8">B+</option>
-                                <option value="7">B</option>
-                                <option value="6">B-</option>
-                                <option value="5">C+</option>
-                                <option value="4">C</option>
-                                <option value="3">C-</option>
-                                <option value="2">D</option>
-                                <option value="1">E</option>
-							</select> -->
-                            <input type="text" class="form-control" readonly value="<?php echo $nilai_mtk; ?>" name="kdnilai1" id="kdnilai1" />
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">Nilai Target</label>
-                        <div class="col-sm-6">
-                            <!-- <select class="form-control" name="target_mtk" oninput="setGapmtk()" id="target_mtk" required>
-                                <option value="">--Pilih Nilai--</option>
-								<?php
-                                    require_once "database.php";
-                                    $db  = new database();
-                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='MTK'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
-                                    ?>
-                            </select> -->
-                            <input type="text" class="form-control" readonly value="<?php echo $target_mtk; ?>" name="kdnilai1" id="kdnilai1" />
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-2">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">GAP</label>
-                        <div class="col-sm-6">
-                            <!-- <input type="text" class="form-control" name="selisih_mtk" id="selisih_mtk" readonly /> -->
-                            <input type="text" class="form-control" readonly value="<?php echo $selisih_mtk; ?>" name="kdnilai1" id="kdnilai1" />
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-2">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">Bobot</label>
-                        <div class="col-sm-6">
-                            <!-- <input type="text" class="form-control" name="nilai_bobot_mtk" id="nilai_bobot_mtk" readonly /> -->
-                            <input type="text" class="form-control" readonly value="<?php echo $nilai_bobot_mtk; ?>" name="kdnilai1" id="kdnilai1" />
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Matematika -->
-            <!-- Bahasa Inggris	 -->
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">Bahasa Inggris</label>
-                        <div class="col-sm-6">
-                            
-                            <!-- <input type="number" class="form-control" name="nilai_bing" id="nilai_bing" required> -->
-							<!-- <select class="form-control" name="nilai_bing" id="nilai_bing" required>
-                                <option value="">--Pilih Nilai--</option>
-								<option value="10">A</option>
-                                <option value="9">A-</option>
-                                <option value="8">B+</option>
-                                <option value="7">B</option>
-                                <option value="6">B-</option>
-                                <option value="5">C+</option>
-                                <option value="4">C</option>
-                                <option value="3">C-</option>
-                                <option value="2">D</option>
-                                <option value="1">E</option>
-							</select> -->
-                            <input type="text" class="form-control" readonly value="<?php echo $nilai_bing; ?>" name="kdnilai1" id="kdnilai1" />
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">Nilai Target</label>
-                        <div class="col-sm-6">
-                            <!-- <select class="form-control" name="target_bing" oninput="setGapbing()" id="target_bing" required>
-                                <option value="">--Pilih Nilai--</option>
-                                <?php
-                                    require_once "database.php";
-                                    $db  = new database();
-                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='BING'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
-                                    ?>
-                            </select> -->
-                            <input type="text" class="form-control" readonly value="<?php echo $target_bing; ?>" name="kdnilai1" id="kdnilai1" />
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-2">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">GAP</label>
-                        <div class="col-sm-6">
-                            <!-- <input type="text" class="form-control" name="selisih_bing" id="selisih_bing" readonly /> -->
-                            <input type="text" class="form-control" readonly value="<?php echo $selisih_bing; ?>" name="kdnilai1" id="kdnilai1" />
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-2">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">Bobot</label>
-                        <div class="col-sm-6">
-                            <!-- <input type="text" class="form-control" name="nilai_bobot_bing" id="nilai_bobot_bing" readonly /> -->
-                            <input type="text" class="form-control" readonly value="<?php echo $nilai_bobot_bing; ?>" name="kdnilai1" id="kdnilai1" />
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Bahasa Inggris	 -->
-            <!-- Pend Agama Islam -->
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">Pend Agama Islam</label>
-                        <div class="col-sm-6">
-                            <!-- <input type="number" class="form-control" name="nilai_rrt" id="nilai_rrt" required> -->
-							<!-- <select class="form-control" name="nilai_rrt" id="nilai_rrt" required>
-                                <option value="">--Pilih Nilai--</option>
-								<option value="10">A</option>
-                                <option value="9">A-</option>
-                                <option value="8">B+</option>
-                                <option value="7">B</option>
-                                <option value="6">B-</option>
-                                <option value="5">C+</option>
-                                <option value="4">C</option>
-                                    <option value="3">C-</option>
-                                    <option value="2">D</option>
-                                    <option value="1">E</option>
-                                </select> -->
-                                <input type="text" class="form-control" readonly value="<?php echo $nilai_rrt; ?>" name="kdnilai1" id="kdnilai1" />
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-4">
-                        <div class="form-group row">
-                            <label class="col-sm-6 col-form-label font-weight-bold">Nilai Target</label>
-                            <div class="col-sm-6">
-                                <!-- <select class="form-control" name="target_rrt" oninput="setGaprrt()" id="target_rrt" required>
-                                    <option value="">--Pilih Nilai--</option>
-                                    <?php
-                                    require_once "database.php";
-                                    $db  = new database();
-                                    $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='RRT'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
-                                    ?>
-                            </select> -->
-                            <input type="text" class="form-control" readonly value="<?php echo $target_rrt; ?>" name="kdnilai1" id="kdnilai1" />
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-2">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">GAP</label>
-                        <div class="col-sm-6">
-                            <!-- <input type="text" class="form-control" name="selisih_rrt" id="selisih_rrt" readonly /> -->
-                            <input type="text" class="form-control" readonly value="<?php echo $selisih_rrt; ?>" name="kdnilai1" id="kdnilai1" />
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-2">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">Bobot</label>
-                        <div class="col-sm-6">
-                            <!-- <input type="text" class="form-control" name="nilai_bobot_rrt" id="nilai_bobot_rrt" readonly /> -->
-                            <input type="text" class="form-control" readonly value="<?php echo $nilai_bobot_rrt; ?>" name="kdnilai1" id="kdnilai1" />
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Pend Agama Islam -->
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">Nilai Core Factor</label>
-                        <div class="col-sm-6">
-                            <!-- <input type="text" class="form-control" name="nilai_cf_A1" id="nilai_cf_A1" readonly /> -->
-                            <input type="text" class="form-control" readonly value="<?php echo $nilai_cf_A1; ?>" name="kdnilai1" id="kdnilai1" />
-
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">Nilai Secondary Factor</label>
-                        <div class="col-sm-6">
-                            <!-- <input type="text" class="form-control" name="nilai_sf_A1" id="nilai_sf_A1" readonly /> -->
-                            <input type="text" class="form-control" readonly value="<?php echo $nilai_sf_A1; ?>" name="kdnilai1" id="kdnilai1" />
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="form-group row">
-                        <label class="col-sm-6 col-form-label font-weight-bold">Nilai Total</label>
-                        <div class="col-sm-6">
-                            <!-- <input type="text" class="form-control" name="nilai_tot_A1" id="nilai_tot_A1" readonly /> -->
-                            <input type="text" class="form-control" readonly value="<?php echo $nilai_tot_A1; ?>" name="kdnilai1" id="kdnilai1" />
-                            
-                        </div>
-                    </div>
+                        <!-- <div class="card-footer text-right">
+                            <button name="simpan" type="submit" class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
+                            <button type="reset" class="btn btn-info"><i class="fa fa-sync-alt"></i> Reset</button>
+                        </div> -->
+                    </form>
                 </div>
             </div>
         </div>
-        <div class="card-footer text-left">
-            <h6 class="m-0 font-weight-bold text-danger">Keterangan Rasio Nilai :</h6>
-            <h6 class="m-0 font-weight-bold text-info">- Nilai A = 90 - 100</h6>
-            <h6 class="m-0 font-weight-bold text-info">- Nilai A- = 80 - 89</h6>
-            <h6 class="m-0 font-weight-bold text-info">- Nilai B+ = 73 - 75</h6>
-            <h6 class="m-0 font-weight-bold text-info">- Nilai B = 70 - 72</h6>
-            <h6 class="m-0 font-weight-bold text-info">- Nilai B- = 68 - 69</h6>
-            <h6 class="m-0 font-weight-bold text-info">- Nilai C+ = 64 - 67</h6>
-            <h6 class="m-0 font-weight-bold text-info">- Nilai C = 60 - 63</h6>
-            <h6 class="m-0 font-weight-bold text-info">- Nilai C- = 55 - 59</h6>
-            <h6 class="m-0 font-weight-bold text-info">- Nilai D = 50 - 54</h6>
-            <h6 class="m-0 font-weight-bold text-info">- Nilai E = Nilai < 50</h6>
-        </div>
-        <!-- <div class="card-footer text-right">
-            <button name="simpan" type="submit" class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
-            <button type="reset" class="btn btn-info"><i class="fa fa-sync-alt"></i> Reset</button>
-        </div> -->
-    </form>
+    </div>
 </div>
-</div>
-</div>
-</div>
-</div>
+
 <!-- <script>
     function setGapips(){
         var n = document.getElementById("nilai_ips").value;
