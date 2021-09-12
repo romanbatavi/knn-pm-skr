@@ -1,8 +1,6 @@
 <?php 
 include './../views/config.php';
-
 include_once('function/helper.php');
-
 if(isset($_POST['b_edit'])) {
 	user_peserta_status($koneksi, $_POST['status'], $_GET['id_user']);
 }
@@ -35,62 +33,62 @@ if($_GET['hal'] == 'edit'){
 									<i class="fa fa-dollar-sign"></i>
 								</div>
 							</div>
-									</div>
+						</div>
+					</div>
+					<div class="widget10-item">
+						<div class="widget10-content">
+							<h2 class="widget10-title">87,123</h2>
+							<span class="widget10-subtitle">Order Received</span>
+						</div>
+						<div class="widget10-addon">
+							<div class="avatar avatar-label-primary avatar-circle widget8-avatar m-0">
+								<div class="avatar-display">
+									<i class="fa fa-dolly-flatbed"></i>
 								</div>
-								<div class="widget10-item">
-									<div class="widget10-content">
-										<h2 class="widget10-title">87,123</h2>
-										<span class="widget10-subtitle">Order received</span>
-									</div>
-									<div class="widget10-addon">
-										<div class="avatar avatar-label-primary avatar-circle widget8-avatar m-0">
-											<div class="avatar-display">
-												<i class="fa fa-dolly-flatbed"></i>
-											</div>
-										</div>
-									</div>
+							</div>
+						</div>
+					</div>
+					<div class="widget10-item">
+						<div class="widget10-content">
+							<h2 class="widget10-title">237</h2>
+							<span class="widget10-subtitle">New Users</span>
+						</div>
+						<div class="widget10-addon">
+							<div class="avatar avatar-label-success avatar-circle widget8-avatar m-0">
+								<div class="avatar-display">
+									<i class="fa fa-users"></i>
 								</div>
-								<div class="widget10-item">
-									<div class="widget10-content">
-										<h2 class="widget10-title">237</h2>
-										<span class="widget10-subtitle">New users</span>
-									</div>
-									<div class="widget10-addon">
-										<div class="avatar avatar-label-success avatar-circle widget8-avatar m-0">
-											<div class="avatar-display">
-												<i class="fa fa-users"></i>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="widget10-item">
-									<div class="widget10-content">
-										<h2 class="widget10-title">5,726</h2>
-										<span class="widget10-subtitle">Unique visits</span>
-									</div>
-									<div class="widget10-addon">
-										<div class="avatar avatar-label-danger avatar-circle widget8-avatar m-0">
-											<div class="avatar-display">
-												<i class="fa fa-link"></i>
-											</div>
-										</div>
-									</div>
+							</div>
+						</div>
+					</div>
+					<div class="widget10-item">
+						<div class="widget10-content">
+							<h2 class="widget10-title">5,726</h2>
+							<span class="widget10-subtitle">Unique Visits</span>
+						</div>
+						<div class="widget10-addon">
+							<div class="avatar avatar-label-danger avatar-circle widget8-avatar m-0">
+								<div class="avatar-display">
+									<i class="fa fa-link"></i>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="row portlet-row-fill-xl">
-					<div class="col-xl-8">
-						<div class="row portlet-row-fill-md">
-							<div class="col-md-6">
-								<div class="portlet">
-									<div class="portlet-header">
-										<div class="portlet-icon">
-											<i class="fa fa-bell"></i>
-										</div>
-										<h3 class="portlet-title">Notification</h3>
-										<div class="portlet-addon">
+			</div>
+		</div>
+	</div>
+	<div class="row portlet-row-fill-xl">
+		<div class="col-xl-8">
+			<div class="row portlet-row-fill-md">
+				<div class="col-md-6">
+					<div class="portlet">
+						<div class="portlet-header">
+							<div class="portlet-icon">
+								<i class="fa fa-bell"></i>
+							</div>
+							<h3 class="portlet-title">Notification</h3>
+							<div class="portlet-addon">
 											<div class="dropdown">
 												<!-- <button class="btn btn-label-primary dropdown-toggle" data-toggle="dropdown">All</button> -->
 												<!-- <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated">
@@ -107,14 +105,14 @@ if($_GET['hal'] == 'edit'){
 											$result = mysqli_query($mysqli, "SELECT * FROM user WHERE hak_akses='siswa' AND status='no' ");
 											$no=1;
 											?>
-										<?php
+											<?php
 											while($res = mysqli_fetch_array($result)) {	
 												
 												if ($res['status'] == 'no') {
 													$label = "Inactive";
 												} 
-									
-												?>
+												
+											?>
 											<div class="rich-list-item">
 												<div class="rich-list-prepend">
 													<div class="avatar avatar-label-info">
@@ -132,12 +130,12 @@ if($_GET['hal'] == 'edit'){
 														<button class="btn btn-text-secondary btn-icon" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></button>
 														<div class="dropdown-menu dropdown-menu-right dropdown-menu-animated">
 															<a class="dropdown-item" href="index.php?hal=edit&id_user=<?php echo $res['id_user']?>">
-															<div class="dropdown-icon">
-																<i class="fa fa-check"></i>
+																<div class="dropdown-icon">
+																	<i class="fa fa-check"></i>
+																</div>
+																<span class="dropdown-content">Aktifasi AKUN</span></a>
 															</div>
-															<span class="dropdown-content">Aktifasi AKUN</span></a>
 														</div>
-													</div>
 												</div>
 											</div>
 											<?php } ?>
@@ -161,13 +159,11 @@ if($_GET['hal'] == 'edit'){
 							</button>
 						</div>
 						<div class="widget widget-table-two">
-							
-							</div>
-							<div class="modal-body">
-								<form method="post" action="">
-									
-									<div class="form-group row">
-										<label for="" class="col-sm-4 col-form-label">Pilih Status (<?=@$arr_edit['nama_lengkap']?>) Apakah DiTerima/Tidak</label>
+					</div>
+						<div class="modal-body">
+							<form method="post" action="">
+								<div class="form-group row">
+									<label for="" class="col-sm-4 col-form-label">Pilih Status (<?=@$arr_edit['nama_lengkap']?>) Apakah DiTerima/Tidak</label>
 										<div class="col-sm-8">
 											<select class="custom-select" name="status">
 												<option value="<?=@$arr_edit['status']?>">Pilih Aktifasi</option>
