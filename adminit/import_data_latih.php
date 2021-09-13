@@ -17,27 +17,26 @@ if (isset($_POST['submit'])) {
     for ($i=2; $i<=$jumlah_baris; $i++){
         
         // menangkap data dan memasukkan ke variabel sesuai dengan kolumnya masing-masing
-        $id_user 		    = $data->val($i, 1);
-        $ips  		    = $data->val($i, 2); 
+        $id_user    = $data->val($i, 1);
+        $ips  		= $data->val($i, 2); 
         $ipa 		= $data->val($i, 3); 
         $pkn 	 	= $data->val($i, 4); 
-        $bindo  		= $data->val($i, 5); 
-        $mtk 	= $data->val($i, 6); 
+        $bindo  	= $data->val($i, 5); 
+        $mtk 	    = $data->val($i, 6); 
         $bing 		= $data->val($i, 7); 
-        $agama 	= $data->val($i, 8); 
+        $agama 	    = $data->val($i, 8); 
         // $rekomendasi    = $data->val($i, 9); 
         // input data ke database (table mproduk)
         $sql = "INSERT `master_nilai` SET`id_user`='$id_user',
-    `ips`='$ips',
-    `ipa`='$ipa',
-    `pkn`='$pkn',
-    `bindo`='$bindo',
-    `mtk`='$mtk',
-    `bing`='$bing',
-    `agama`='$agama'
-    ";
-    
-    
+            `ips`='$ips',
+            `ipa`='$ipa',
+            `pkn`='$pkn',
+            `bindo`='$bindo',
+            `mtk`='$mtk',
+            `bing`='$bing',
+            `agama`='$agama'
+        ";
+
     if ($koneksi->query($sql) === TRUE) {
         echo "berasil";
         echo "<script>alert('Input berhasil');window.location = 'index.php?m=masternilai';</script>";
@@ -51,5 +50,4 @@ if (isset($_POST['submit'])) {
 //     `sekolah`='$sekolah',`jarak`='$jarak',`akreditasi`='$akreditasi',
 //     `kelulusan`='$kelulusan',`rata_rata_nem`='$rata_rata_nem'";
 //     $res = mysqli_query($koneksi, $sql);
-
 ?>

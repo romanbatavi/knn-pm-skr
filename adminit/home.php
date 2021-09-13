@@ -181,10 +181,10 @@ if($_GET['hal'] == 'edit'){
 					</div>
 				</div>
 				<!-- Modal Edit Kriteria -->  
-				<script>
-					if (edit) {
-						$(document).ready(function(){
-							$('#exampleModal2').modal();
-						});
-					}
-				</script>
+			<script>
+				if (edit) {
+					$(document).ready(function(){
+						$('#exampleModal2').modal();
+					});
+				}
+			</script>
