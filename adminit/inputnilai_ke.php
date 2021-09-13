@@ -207,6 +207,7 @@
                                 </div>
                                 <!-- Perhitungan Core -->
                                 
+                                <!-- Perhitungan Secondary -->
                                 <div class="col-md-4">
                                     <div class="form-group row">
                                         <label class="col-sm-6 col-form-label font-weight-bold">Nilai Secondary Factor</label>
@@ -215,7 +216,9 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Perhitungan Secondary -->
                                 
+                                <!-- Perhitungan Total -->
                                 <div class="col-md-4">
                                     <div class="form-group row">
                                         <label class="col-sm-6 col-form-label font-weight-bold">Nilai Total</label>
@@ -226,6 +229,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Perhitungan Total -->
 
                         <div class="card-footer text-right">
                             <button name="simpan" type="submit" class="btn btn-success"><i class="fa fa-save"></i>Simpan</button>
