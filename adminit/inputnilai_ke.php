@@ -229,7 +229,7 @@
 
                         <div class="card-footer text-right">
                             <button name="simpan" type="submit" class="btn btn-success"><i class="fa fa-save"></i>Simpan</button>
-                            <button type="reset" class="btn btn-info"><i class="fa fa-sync-alt"></i> Reset</button>
+                            <button type="reset" class="btn btn-info"><i class="fa fa-sync-alt"></i>Reset</button>
                         </div>
                     </form>
                 </div>
