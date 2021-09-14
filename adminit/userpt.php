@@ -9,7 +9,6 @@ if(isset($_POST['b_edit'])) {
 	$_POST['no'],
 	$_POST['username'],
 	$_POST['password'], $_GET['id_user']);
-	
 }
 
 error_reporting(0);
@@ -29,67 +28,61 @@ if($_GET['hal'] == 'edit'){
 }
 ?>
 
-
 <div class="container-fluid">
-				<div class="row">
-					<div class="col-12">
-						<div class="portlet">
-							<div class="portlet-header portlet-header-bordered">
-								<h3 class="portlet-title">Data Perusahaan</h3>
-								<div class="form-group">
-									<button class="btn btn-success" data-toggle="modal" data-target="#exampleModal1">Tambah Perusahaan</button>
+    <div class="row">
+        <div class="col-12">
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Data Perusahaan</h3>
+                    <div class="form-group">
+                        <button class="btn btn-success" data-toggle="modal" data-target="#exampleModal1">Tambah Perusahaan</button>
+                    </div>
+                </div>
+                <div class="portlet-body">
+                    <table id="datatable-1" class="table table-bordered table-striped table-hover nowrap">
+                        <thead>
+                            <tr>
+                                <th>Nama PT</th>
+                                <th>Email</th>
+                                <th>Username</th>
+                                <th>Password</th>
+                                <th>No Telpon</th>
+                                <th>Alamat</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <?php
+        					$rows = $db->get_results("SELECT * FROM user WHERE hak_akses='pt'");
+                            $no = 0;
+                            foreach ($rows as $row) : 
+                        ?>
+						<tbody>
+                            <tr>
+                                <td><?= $row->nama_lengkap ?></td>
+                                <td><?= $row->email ?></td>
+                                <td><?= $row->username ?></td>
+                                <td><?= $row->password ?></td>
+                                <td><?= $row->no ?></td>
+                                <td><?= $row->alamat ?></td>
+                                <td>
+                                    <a class="btn btn-xs btn-warning" href="?m=userpt&hal=edit&id_user=<?= $row->id_user ?>"><i class="fa fa-edit"></i></a>
+                                    <a class="btn btn-xs btn-danger" href="?m=userpt&hal=hapus&id_user=<?= $row->id_user ?>" onclick="return confirm('Hapus Data?')"><i class="fa fa-trash"></i></a>
+                                </td>
+                            </tr>
+                            <?php endforeach ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-            					</div>
-							</div>
-							<div class="portlet-body">
-								<table id="datatable-1" class="table table-bordered table-striped table-hover nowrap">
-								<thead>
-								<tr>
-                					<th>Nama PT</th>
-									<th>Email</th>
-									<th>Username</th>
-									<th>Password</th>
-                					<th>No Telpon</th>
-                					<th>Alamat</th>
-                					<th>Aksi</th>
-								</tr>
-								</thead>
-								<?php
-        						$rows = $db->get_results("SELECT * FROM user WHERE hak_akses='pt'");
-        						$no = 0;
-        						foreach ($rows as $row) : ?>
-								<tbody>
-								<tr>
-                					<td><?= $row->nama_lengkap ?></td>
-									<td><?= $row->email ?></td>
-									<td><?= $row->username ?></td>
-                					<td><?= $row->password ?></td>
-                					<td><?= $row->no ?></td>
-                					<td><?= $row->alamat ?></td>
-
-                					<td>
-										<a class="btn btn-xs btn-warning" href="?m=userpt&hal=edit&id_user=<?= $row->id_user ?>"><i class="fa fa-edit"></i></a>
-                    					<a class="btn btn-xs btn-danger" href="?m=userpt&hal=hapus&id_user=<?= $row->id_user ?>" onclick="return confirm('Hapus Data?')"><i class="fa fa-trash"></i></a>
-                					</td>
-								</tr>
-								<?php endforeach ?>
-								
-								</tbody>
-								
-								</table>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<?php 
-
+<?php 
 // connect to database
 include_once("./../views/config.php");
-
-$errors   = array();
-$success   = array(); 
-
+    $errors   = array();
+    $success   = array(); 
 // call the register() function if register_btn is clicked
 if (isset($_POST['Submit'])) {
     Submit();
@@ -99,7 +92,6 @@ if (isset($_POST['Submit'])) {
 function Submit(){
     global $conn, $errors;
     global $conn, $success;
-    
     // receive all input values from the form
     $nama_lengkap    =  e($_POST['nama_lengkap']);
     $email    =  e($_POST['email']);
@@ -109,80 +101,70 @@ function Submit(){
     $alamat    =  e($_POST['alamat']);
 	$hak_akses    =  e($_POST['hak_akses']);
 
-
-    if(empty($nama_lengkap) ||
-     empty($email) ||
-     empty($username) ||
-     empty($password) ||
-     empty($no) ||
-     empty($alamat) ||
-     empty($hak_akses)) {
+if(empty($nama_lengkap) ||
+    empty($email) ||
+    empty($username) ||
+    empty($password) ||
+    empty($no) ||
+    empty($alamat) ||
+    empty($hak_akses)) {
 				
-      echo '<script>
-   swal({
-    title: "Maaf!",
-    text: "Data Yang Di Input  Tidak Lengkap",
-    icon: "error",
-    button: "oke!",
-  }).then(function() {
-    window.location = "";
-  });
-            </script>';
+    echo '<script>
+        swal({
+        title: "Maaf!",
+        text: "Data Yang Di Input  Tidak Lengkap",
+        icon: "error",
+        button: "oke!",
+        }).then(function() {
+        window.location = "";
+        });
+        </script>';
     } else {	
 
     // register user if there are no errors in the form
     if (count($errors) == 0) {
-
-        if (isset($_POST['nama_lengkap'])) {
-            $loans = e($_POST['nama_lengkap']);
-            $query = "INSERT INTO user (nama_lengkap, 
-            email,
-			username,
-			password,
-			no,
-			alamat,
-			hak_akses) 
-                      VALUES('$nama_lengkap', 
-                      '$email', 
-                      '$username', 
-                      '$password', 
-                      '$no', 
-                      '$alamat',
-					  '$hak_akses')";
-            mysqli_query($conn, $query);
-            echo '<script>
-  swal({
-   title: "Good Job!",
-   text: " ",
-   icon: "success",
-   button: "Done!",
- }).then(function() {
-   window.location = "index.php?m=userpt";
- });
-           </script>';
-            
-            
+    if (isset($_POST['nama_lengkap'])) {
+        $loans = e($_POST['nama_lengkap']);
+        $query = "INSERT INTO user (nama_lengkap, 
+        email,
+		username,
+		password,
+		no,
+		alamat,
+		hak_akses) 
+        VALUES('$nama_lengkap', 
+        '$email', 
+        '$username', 
+        '$password', 
+        '$no', 
+        '$alamat',
+		'$hak_akses')";
+    mysqli_query($conn, $query);
+    echo '<script>
+        swal({
+        title: "Good Job!",
+        text: " ",
+        icon: "success",
+        button: "Done!",
+        }).then(function() {
+        window.location = "index.php?m=userpt";
+        });
+        </script>';
+            }
         }
-      }
     }
-
 }
 
-// return user array from their id
 function getUserById($id){
     global $conn;
-
-}
+    }
 // LOGIN USER
-
-// escape string
 function e($val){
     global $conn;
     return mysqli_real_escape_string($conn, trim($val));
-}
+    }
+?>
 
-?>     
-<!-- Modal Input Data Kriteria -->
 <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
