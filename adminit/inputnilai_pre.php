@@ -229,16 +229,16 @@
         document.getElementById("selisih_nakdm").value = s;
         document.getElementById("nilai_bobot_nakdm").value = nb;
 
-    var akademik = document.getElementById("nilai_bobot_akdm").value;
-    var nonakademik = document.getElementById("nilai_bobot_nakdm").value;
-    
+        var akademik = document.getElementById("nilai_bobot_akdm").value;
+        var nonakademik = document.getElementById("nilai_bobot_nakdm").value;
+        
 
-    var cf = (parseFloat(akademik)) / 1;
-    var sf = (parseFloat(nonakademik)) / 1;
-    var nt = (cf * 0.6) + (sf * 0.4);
+        var cf = (parseFloat(akademik)) / 1;
+        var sf = (parseFloat(nonakademik)) / 1;
+        var nt = (cf * 0.6) + (sf * 0.4);
 
-    document.getElementById("nilai_cf_A6").value  = cf;
-    document.getElementById("nilai_sf_A6").value  = sf;
-    document.getElementById("nilai_tot_A6").value = nt;
+        document.getElementById("nilai_cf_A6").value  = cf;
+        document.getElementById("nilai_sf_A6").value  = sf;
+        document.getElementById("nilai_tot_A6").value = nt;
     }
 </script>

@@ -876,20 +876,20 @@
         document.getElementById("selisih_rrt").value = s;
         document.getElementById("nilai_bobot_rrt").value = nb;
 
-    var ips = document.getElementById("nilai_bobot_ips").value;
-    var ipa = document.getElementById("nilai_bobot_ipa").value;
-    var pkn = document.getElementById("nilai_bobot_pkn").value;
-    var bind = document.getElementById("nilai_bobot_bind").value;
-    var mtk = document.getElementById("nilai_bobot_mtk").value;
-    var bing = document.getElementById("nilai_bobot_bing").value;
-    var rrt = document.getElementById("nilai_bobot_rrt").value;
+        var ips = document.getElementById("nilai_bobot_ips").value;
+        var ipa = document.getElementById("nilai_bobot_ipa").value;
+        var pkn = document.getElementById("nilai_bobot_pkn").value;
+        var bind = document.getElementById("nilai_bobot_bind").value;
+        var mtk = document.getElementById("nilai_bobot_mtk").value;
+        var bing = document.getElementById("nilai_bobot_bing").value;
+        var rrt = document.getElementById("nilai_bobot_rrt").value;
 
-    var cf = (parseFloat(bind) + parseFloat(mtk) + parseFloat(bing)) / 3;
-    var sf = (parseFloat(ips) + parseFloat(ipa) + parseFloat(pkn) + parseFloat(rrt)) / 4;
-    var nt = (cf * 0.6) + (sf * 0.4);
+        var cf = (parseFloat(bind) + parseFloat(mtk) + parseFloat(bing)) / 3;
+        var sf = (parseFloat(ips) + parseFloat(ipa) + parseFloat(pkn) + parseFloat(rrt)) / 4;
+        var nt = (cf * 0.6) + (sf * 0.4);
 
-    document.getElementById("nilai_cf_A1").value  = cf;
-    document.getElementById("nilai_sf_A1").value  = sf;
-    document.getElementById("nilai_tot_A1").value = nt;
+        document.getElementById("nilai_cf_A1").value  = cf;
+        document.getElementById("nilai_sf_A1").value  = sf;
+        document.getElementById("nilai_tot_A1").value = nt;
     }
 </script>
