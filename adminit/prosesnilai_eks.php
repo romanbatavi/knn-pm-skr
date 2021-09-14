@@ -2,7 +2,6 @@
     require "database.php";
     $db = new database();
     require_once "class/ekskul.php";
-
     $penilaian = new ekskul($db);
     var_dump($_POST);
 

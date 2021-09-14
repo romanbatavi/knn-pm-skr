@@ -1,7 +1,7 @@
 <!-- tes -->
 <div class="content">
-			<div class="container-fluid">
-				<div class="row">
+	<div class="container-fluid">
+		<div class="row">
 					<div class="col-12">
 						<div class="portlet">
 							<div class="portlet-header portlet-header-bordered">
@@ -13,10 +13,10 @@
 								</p>
 								<hr> -->
 								<table id="datatable-1" class="table table-bordered table-striped table-hover nowrap">
-								<thead>
-								<tr>
-									<th>ID</th>
-									<th>Card ID</th>
+									<thead>
+										<tr>
+											<th>ID</th>
+											<th>Card ID</th>
 									<th>Name</th>
 									<th>Position</th>
 									<th>Office</th>
@@ -903,12 +903,11 @@
 									<th>Start date</th>
 									<th>Salary</th>
 								</tr>
-								</tfoot>
-								</table>
-							</div>
-						</div>
+							</tfoot>
+						</table>
 					</div>
 				</div>
 			</div>
 		</div>
-        <!-- tes -->
+	</div>
+</div>

@@ -2,9 +2,7 @@
     require "database.php";
     $db = new database();
     require_once "class/sikap.php";
-
     $penilaian = new sikap($db);
-
     var_dump($_POST);
 
     if (isset($_POST['simpan'])) {

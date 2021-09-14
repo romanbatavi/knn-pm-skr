@@ -2,7 +2,6 @@
     require "database.php";
     $db = new database();
     require_once "class/kemampuan.php";
-
     $kemampuan = new kemampuan($db);
 
     if (isset($_POST['simpan'])) {

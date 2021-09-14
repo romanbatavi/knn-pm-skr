@@ -2,7 +2,6 @@
     require "database.php";
     $db = new database();
     require_once "class/kegiatan.php";
-
     $kemampuan = new kegiatan($db);
     var_dump($_POST);
 

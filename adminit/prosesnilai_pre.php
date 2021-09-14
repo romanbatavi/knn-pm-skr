@@ -2,9 +2,7 @@
     require "database.php";
     $db = new database();
     require_once "class/prestasi.php";
-
     $penilaian = new prestasi($db);
-
     var_dump($_POST);
 
     if (isset($_POST['simpan'])) {

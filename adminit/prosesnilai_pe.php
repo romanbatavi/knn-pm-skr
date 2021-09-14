@@ -2,7 +2,6 @@
     require "database.php";
     $db = new database();
     require_once "class/penilaian.php";
-
     $penilaian = new penilaian($db);
 
     if (isset($_POST['simpan'])) {
