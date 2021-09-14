@@ -4,22 +4,22 @@
 			<div class="portlet">
 				<div class="portlet-header portlet-header-bordered">
 					<h3 class="portlet-title">Tambah Data kegiatan</h3>
-					</div>
+				</div>
 				<div class="portlet-body">
                     <form method="POST" action="?m=prosesnilai_pre">
                         <div class="card-body">
-                        <div class="form-group row">
+                            <div class="form-group row">
                                 <label class="col-sm-2 col-form-label font-weight-bold">Angkatan</label>
                                 <div class="col-sm-10">
                                 <?php $years = range(2020, strftime("%Y", time())); ?>
-                                    <select class="form-control" name="angkatan" required>
-                                        <option value="">--Pilih Angkatan--</option>
-                                        <?php foreach($years as $year) : ?>
-                                    <option value="<?php echo $year; ?>"><?php echo $year; ?></option>
-                                        <?php endforeach; ?>
-                                    </select>
-                                </div>
+                                <select class="form-control" name="angkatan" required>
+                                <option value="">--Pilih Angkatan--</option>
+                                <?php foreach($years as $year) : ?>
+                                <option value="<?php echo $year; ?>"><?php echo $year; ?></option>
+                                <?php endforeach; ?>
+                                </select>
                             </div>
+                        </div>
 
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label font-weight-bold">Nama Siswa</label>

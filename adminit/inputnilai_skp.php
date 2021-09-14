@@ -8,18 +8,19 @@
 				<div class="portlet-body">
                     <form method="POST" action="?m=prosesnilai_skp">
                         <div class="card-body">
-                        <div class="form-group row">
+                            <div class="form-group row">
                                 <label class="col-sm-2 col-form-label font-weight-bold">Angkatan</label>
                                 <div class="col-sm-10">
-                                <?php $years = range(2020, strftime("%Y", time())); ?>
+                                        <?php $years = range(2020, strftime("%Y", time())); ?>
                                     <select class="form-control" name="angkatan" required>
-                                    <option value="">--Pilih Angkatan--</option>
-                                    <?php foreach($years as $year) : ?>
-                                    <option value="<?php echo $year; ?>"><?php echo $year; ?></option>
-                                    <?php endforeach; ?>
+                                        <option value="">--Pilih Angkatan--</option>
+                                        <?php foreach($years as $year) : ?>
+                                        <option value="<?php echo $year; ?>"><?php echo $year; ?></option>
+                                        <?php endforeach; ?>
                                     </select>
                                 </div>
                             </div>
+
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label font-weight-bold">Nama Siswa</label>
                                 <div class="col-sm-10">
@@ -31,7 +32,7 @@
                                             $db  = new database();
                                             $kon = $db->connect(); $qcek = $kon->query("select * from user WHERE status = 'ya' AND hak_akses = 'siswa' AND id_user NOT IN (SELECT id_user FROM pm_sikap)"); 
                                             while ($row = $qcek->fetch_array()) {echo"<option value='".$row['id_user']."'>".$row['nis']." |".$row['nama_lengkap']." | ".$row['angkatan']."</option>";} 
-                                            ?>
+                                        ?>
                                     </select>
                                 </div>
                             </div>
@@ -63,7 +64,7 @@
                                                     require_once "database.php";
                                                     $db  = new database();
                                                     $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='KD'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
-                                                    ?>
+                                                ?>
                                             </select>
                                         </div>
                                     </div>
@@ -116,7 +117,7 @@
                                                     require_once "database.php";
                                                     $db  = new database();
                                                     $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='PRL'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
-                                                    ?>
+                                                ?>
                                             </select>
                                         </div>
                                     </div>
@@ -169,7 +170,7 @@
                                                     require_once "database.php";
                                                     $db  = new database();
                                                     $kon = $db->connect(); $qcek = $kon->query("select * from pm_kriteria where kdkriteria='KRJ'"); while ($row = $qcek->fetch_array()) {echo"<option value='".$row['target']."'>".$row['target']."</option>";} 
-                                                    ?>
+                                                ?>
                                             </select>
                                         </div>
                                     </div>
@@ -193,7 +194,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Pendidikan Kewarganegaraan -->
+                            <!-- Kerajin -->
+
+                            <!-- Perhitungan Core -->
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group row">
@@ -203,7 +206,9 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Perhitungan Core -->
 
+                                <!-- Perhitungan Secondary -->
                                 <div class="col-md-4">
                                     <div class="form-group row">
                                         <label class="col-sm-6 col-form-label font-weight-bold">Nilai Secondary Factor</label>
@@ -212,7 +217,9 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Perhitungan Secondary -->
 
+                                <!-- Perhitungan Total -->
                                 <div class="col-md-4">
                                     <div class="form-group row">
                                         <label class="col-sm-6 col-form-label font-weight-bold">Nilai Total</label>
@@ -223,19 +230,8 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="card-footer text-left">
-                            <h6 class="m-0 font-weight-bold text-danger">Keterangan Rasio Nilai :</h6>
-                            <h6 class="m-0 font-weight-bold text-info">- Nilai A = 90 - 100</h6>
-                            <h6 class="m-0 font-weight-bold text-info">- Nilai A- = 80 - 89</h6>
-                            <h6 class="m-0 font-weight-bold text-info">- Nilai B+ = 73 - 75</h6>
-                            <h6 class="m-0 font-weight-bold text-info">- Nilai B = 70 - 72</h6>
-                            <h6 class="m-0 font-weight-bold text-info">- Nilai B- = 68 - 69</h6>
-                            <h6 class="m-0 font-weight-bold text-info">- Nilai C+ = 64 - 67</h6>
-                            <h6 class="m-0 font-weight-bold text-info">- Nilai C = 60 - 63</h6>
-                            <h6 class="m-0 font-weight-bold text-info">- Nilai C- = 55 - 59</h6>
-                            <h6 class="m-0 font-weight-bold text-info">- Nilai D = 50 - 54</h6>
-                            <h6 class="m-0 font-weight-bold text-info">- Nilai E = Nilai < 50</h6>
-                        </div> -->
+                        <!-- Perhitungan Total -->
+                        
                         <div class="card-footer text-right">
                             <button name="simpan" type="submit" class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
                             <button type="reset" class="btn btn-info"><i class="fa fa-sync-alt"></i> Reset</button>
