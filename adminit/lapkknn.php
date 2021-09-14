@@ -40,16 +40,16 @@ $pdf->SetFont('Arial','',10);
 $q = esc_field($_GET['q']);
 $rows = $db->get_results("SELECT * FROM tb_atribut WHERE nama_atribut LIKE '%$q%' ORDER BY id_atribut");
 $no = 0;
-foreach ($rows as $row) : 
-                           
 
-	$pdf->Cell(1, 0.8, ++$no , 1, 0, 'C');
-	$pdf->Cell(2, 0.8, $row->id_atribut,1, 0, 'C');
-    $pdf->Cell(10, 0.8, $row->nama_atribut,1, 0, 'C');
-	$pdf->Cell(7, 0.8, $row->keterangan,1, 1, 'C');
-	
-	
-                                endforeach;
+foreach ($rows as $row) : 
+
+$pdf->Cell(1, 0.8, ++$no , 1, 0, 'C');
+$pdf->Cell(2, 0.8, $row->id_atribut,1, 0, 'C');
+$pdf->Cell(10, 0.8, $row->nama_atribut,1, 0, 'C');
+$pdf->Cell(7, 0.8, $row->keterangan,1, 1, 'C');
+
+endforeach;
+
 $pdf->ln(1);
 $pdf->SetFont('Arial','B',12);
 $pdf->Cell(40.5,0.7,"Tanggal: ".date("d/m/Y"),0,0,'C');
@@ -65,6 +65,5 @@ $pdf->Cell(40.5,0.7,"SMK DINAMIKA PEMBANGUNAN 1 JAKARTA",0,10,'C');
 
 
 $pdf->Output("LAPORAN_Atrbut_KNN.pdf","I");
-
 ?>
 

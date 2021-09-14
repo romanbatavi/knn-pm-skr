@@ -39,37 +39,34 @@ $pdf->Cell(9, 0.8, 'Alamat', 1, 1, 'C');
 $pdf->SetFont('Arial','',10);
 
 $rows = $db->get_results("SELECT * FROM user WHERE hak_akses='pt'");
-        						$no = 0;
-        						foreach ($rows as $row) :
-                                    $isi = strip_tags($row->alamat);
+$no = 0;
+foreach ($rows as $row) :
 
-                                    $des = htmlentities(strip_tags($row->alamat)); // membuat paragraf pada isi berita dan mengabaikan tag html
-                                    $isi = substr($des,0,50); // ambil sebanyak 220 karakter
-                                    $isi= substr($des,0,strrpos($isi," "));   
-
+    $isi = strip_tags($row->alamat);
+    $des = htmlentities(strip_tags($row->alamat)); // membuat paragraf pada isi berita dan mengabaikan tag html
+    $isi = substr($des,0,50); // ambil sebanyak 220 karakter
+    $isi= substr($des,0,strrpos($isi," "));   
 	$pdf->Cell(1, 0.8, ++$no , 1, 0, 'C');
 	$pdf->Cell(10, 0.8, $row->nama_lengkap,1, 0, 'C');
     $pdf->Cell(5, 0.8, $row->email,1, 0, 'C');
     $pdf->Cell(2, 0.8, $row->no,1, 0, 'C');
     $pdf->Cell(9, 0.8, $isi,1, 1, 'C');
-	
-	
-                                endforeach;
-$pdf->ln(1);
-$pdf->SetFont('Arial','B',12);
-$pdf->Cell(40.5,0.7,"Tanggal: ".date("d/m/Y"),0,0,'C');
 
-$pdf->ln(1);
-$pdf->SetFont('Arial','B',12);
-$pdf->Cell(40.5,0.7,"Mengetahui",0,10,'C');
+endforeach;
 
-$pdf->ln(1);
-$pdf->ln(1);
-$pdf->SetFont('Arial','B',12);
-$pdf->Cell(40.5,0.7,"SMK DINAMIKA PEMBANGUNAN 1 JAKARTA",0,10,'C');
+    $pdf->ln(1);
+    $pdf->SetFont('Arial','B',12);
+    $pdf->Cell(40.5,0.7,"Tanggal: ".date("d/m/Y"),0,0,'C');
 
+    $pdf->ln(1);
+    $pdf->SetFont('Arial','B',12);
+    $pdf->Cell(40.5,0.7,"Mengetahui",0,10,'C');
 
-$pdf->Output("LAPORAN_DATA_PT.pdf","I");
+    $pdf->ln(1);
+    $pdf->ln(1);
+    $pdf->SetFont('Arial','B',12);
+    $pdf->Cell(40.5,0.7,"SMK DINAMIKA PEMBANGUNAN 1 JAKARTA",0,10,'C');
 
+    $pdf->Output("LAPORAN_DATA_PT.pdf","I");
 ?>
 

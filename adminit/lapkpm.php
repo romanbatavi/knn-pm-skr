@@ -38,23 +38,18 @@ $pdf->Cell(4, 0.8, 'Aspek', 1, 0, 'C');
 $pdf->Cell(9, 0.8, 'Sub Aspek', 1, 0, 'C');
 $pdf->Cell(3, 0.8, 'Jenis Factor', 1, 0, 'C');
 $pdf->Cell(2, 0.8, 'Nilai Target', 1, 1, 'C');
-
 $pdf->SetFont('Arial','',10);
-
-
 $no=1;
 
 $query = $kon->query("SELECT * FROM pm_kriteria, pm_aspek where pm_kriteria.id_aspek=pm_aspek.id_aspek");
 $no = 1;
-while ($row = $query->fetch_array()) {
-
+	while ($row = $query->fetch_array()) {
 	$pdf->Cell(1, 0.8, $no , 1, 0, 'C');
 	$pdf->Cell(3, 0.8, $row['kdkriteria'],1, 0, 'C');
 	$pdf->Cell(4, 0.8, $row['namaaspek'], 1, 0,'C');
 	$pdf->Cell(9, 0.8, $row['nmkriteria'],1, 0, 'C');
 	$pdf->Cell(3, 0.8, $row['jenis'], 1, 0,'C');
 	$pdf->Cell(2, 0.8, $row['target'],1, 1, 'C');
-	
 	$no++;
 }
 $pdf->ln(1);
@@ -69,7 +64,6 @@ $pdf->ln(1);
 $pdf->ln(1);
 $pdf->SetFont('Arial','B',12);
 $pdf->Cell(40.5,0.7,"SMK DINAMIKA PEMBANGUNAN 1 JAKARTA",0,10,'C');
-
 
 $pdf->Output("LAPORAN_KRITERIA_PM.pdf","I");
 
