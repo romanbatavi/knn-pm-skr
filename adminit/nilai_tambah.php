@@ -6,11 +6,7 @@
 					<h3 class="portlet-title">Tambah Nilai Atribut/Kriteria</h3>
 				</div>
 				<div class="portlet-body">
-					<!-- <p>
-						In this example you can see Datatable doing both horizontal and vertical scrolling at the same time. To enable y-scrolling or x-scrolling simply set the <code>scrollY|scrollX</code> parameter to be whatever you want the container wrapper's height or width.
-					</p>
-					<hr> -->
-				<?php if ($_POST) include 'aksi.php' ?>
+                    <?php if ($_POST) include 'aksi.php' ?>
                     <form method="post" action="?m=nilai_tambah">
                         <div class="form-group">
                             <label>Atribut <span class="text-danger">*</span></label>
