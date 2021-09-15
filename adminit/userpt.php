@@ -166,131 +166,123 @@ function e($val){
 ?>
 
 <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header bg-info text-white">
-                    <h5 class="modal-title" id="exampleModalLabel"> <i class="fas fa-user-plus"></i> Tambah PT Akses</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-info text-white">
+                <h5 class="modal-title" id="exampleModalLabel"> <i class="fas fa-user-plus"></i> Tambah PT Akses</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-				<div class="widget widget-table-two">
-                
-                </div>
-                <div class="modal-body">
-                    <form method="post" action="">
-						<div class="form-group row">
-                            <label for="" class="col-sm-4 col-form-label">Nama Lengkap</label>
-                            <div class="col-sm-8">
+                </button>
+            </div>
+            <div class="widget widget-table-two">
+            </div>
+            <div class="modal-body">
+                <form method="post" action="">
+                    <div class="form-group row">
+                        <label for="" class="col-sm-4 col-form-label">Nama Lengkap</label>
+                        <div class="col-sm-8">
                             <input type="text" class="form-control" name="nama_lengkap">
-							<input type="hidden" class="form-control" name="hak_akses" value="pt">
-
-                            </div>
-                        </div>	
-						<div class="form-group row">
-                            <label for="" class="col-sm-4 col-form-label">Email</label>
-                            <div class="col-sm-8">
+                            <input type="hidden" class="form-control" name="hak_akses" value="pt">
+                        </div>
+                    </div>	
+                    <div class="form-group row">
+                        <label for="" class="col-sm-4 col-form-label">Email</label>
+                        <div class="col-sm-8">
                             <input type="email" class="form-control" name="email">
-                            </div>
-                        </div>	
-						<div class="form-group row">
-                            <label for="" class="col-sm-4 col-form-label">Alamat</label>
-                            <div class="col-sm-8">
+                        </div>
+                    </div>	
+                    <div class="form-group row">
+                        <label for="" class="col-sm-4 col-form-label">Alamat</label>
+                        <div class="col-sm-8">
                             <input type="text" class="form-control" name="alamat">
-                            </div>
                         </div>
-						<div class="form-group row">
-                            <label for="" class="col-sm-4 col-form-label">No Telpon</label>
-                            <div class="col-sm-8">
+                    </div>
+                    <div class="form-group row">
+                        <label for="" class="col-sm-4 col-form-label">No Telpon</label>
+                        <div class="col-sm-8">
                             <input type="number" class="form-control" name="no">
-                            </div>
                         </div>
-						<div class="form-group row">
-                            <label for="" class="col-sm-4 col-form-label">Username</label>
-                            <div class="col-sm-8">
+                    </div>
+                    <div class="form-group row">
+                        <label for="" class="col-sm-4 col-form-label">Username</label>
+                        <div class="col-sm-8">
                             <input type="text" class="form-control" name="username">
-                            </div>
                         </div>
-						<div class="form-group row">
-                            <label for="" class="col-sm-4 col-form-label">Password</label>
-                            <div class="col-sm-8">
+                    </div>
+                    <div class="form-group row">
+                        <label for="" class="col-sm-4 col-form-label">Password</label>
+                        <div class="col-sm-8">
                             <input type="password" class="form-control" name="password">
-                            </div>
                         </div>
-						<div class="modal-footer">
-                      		<button type="submit" name="Submit" value="add" class="btn bg-info text-white"> <i class="fas fa-save"></i> Simpan</button>
-						</div>
-				</form>
-                </div>
-               
-                
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" name="Submit" value="add" class="btn bg-info text-white"> <i class="fas fa-save"></i> Simpan</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-<!-- Modal Input Kriteria -->
+</div>
 
-
-			<!-- Modal Edit Data Kriteria -->
 <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header bg-warning text-white">
-                    <h5 class="modal-title" id="exampleModalLabel"> <i class="fas fa-user-plus"></i> Edit Akun (<?=@$arr_edit['nama_lengkap']?>)</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-warning text-white">
+                <h5 class="modal-title" id="exampleModalLabel"> <i class="fas fa-user-plus"></i> Edit Akun (<?=@$arr_edit['nama_lengkap']?>)</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="widget widget-table-two">
-                
-                </div>
-                <div class="modal-body">
-                    <form method="post" action="">
-						<div class="form-group row">
-                            <label for="" class="col-sm-4 col-form-label">Nama Lengkap</label>
-                            <div class="col-sm-8">
+                </button>
+            </div>
+            <div class="widget widget-table-two">
+            </div>
+            <div class="modal-body">
+                <form method="post" action="">
+                    <div class="form-group row">
+                        <label for="" class="col-sm-4 col-form-label">Nama Lengkap</label>
+                        <div class="col-sm-8">
                             <input type="text" class="form-control" name="nama_lengkap"  value='<?=@$arr_edit['nama_lengkap']?>'>
-                            </div>
-                        </div>	
-						<div class="form-group row">
-                            <label for="" class="col-sm-4 col-form-label">Email</label>
-                            <div class="col-sm-8">
+                        </div>
+                    </div>	
+                    <div class="form-group row">
+                        <label for="" class="col-sm-4 col-form-label">Email</label>
+                        <div class="col-sm-8">
                             <input type="email" class="form-control" name="email"  value='<?=@$arr_edit['email']?>'>
-                            </div>
-                        </div>	
-						<div class="form-group row">
-                            <label for="" class="col-sm-4 col-form-label">Alamat</label>
-                            <div class="col-sm-8">
+                        </div>
+                    </div>	
+                    <div class="form-group row">
+                        <label for="" class="col-sm-4 col-form-label">Alamat</label>
+                        <div class="col-sm-8">
                             <input type="text" class="form-control" name="alamat"  value='<?=@$arr_edit['alamat']?>'>
-                            </div>
                         </div>
-						<div class="form-group row">
-                            <label for="" class="col-sm-4 col-form-label">No Telpon</label>
-                            <div class="col-sm-8">
+                    </div>
+                    <div class="form-group row">
+                        <label for="" class="col-sm-4 col-form-label">No Telpon</label>
+                        <div class="col-sm-8">
                             <input type="text" class="form-control" name="no"  value='<?=@$arr_edit['no']?>'>
-                            </div>
                         </div>
-						<div class="form-group row">
-                            <label for="" class="col-sm-4 col-form-label">Username</label>
-                            <div class="col-sm-8">
+                    </div>
+                    <div class="form-group row">
+                        <label for="" class="col-sm-4 col-form-label">Username</label>
+                        <div class="col-sm-8">
                             <input type="text" class="form-control" name="username"  value='<?=@$arr_edit['username']?>'>
-                            </div>
                         </div>
-						<div class="form-group row">
-                            <label for="" class="col-sm-4 col-form-label">Password</label>
-                            <div class="col-sm-8">
+                    </div>
+                    <div class="form-group row">
+                        <label for="" class="col-sm-4 col-form-label">Password</label>
+                        <div class="col-sm-8">
                             <input type="password" class="form-control" name="password"  value='<?=@$arr_edit['password']?>'>
-                            </div>
                         </div>
-                        
+                    </div>
+                    
                 </div>
                 <div class="modal-footer">
                     <button type="submit" name="b_edit" class="btn bg-warning text-white"> <i class="fas fa-save"></i> Simpan</button>
-                    </form>
-                </div>
+                </form>
             </div>
         </div>
     </div>
-<!-- Modal Edit Kriteria -->  
+</div>
+
 <script>
 if (edit) {
     $(document).ready(function(){
