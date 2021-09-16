@@ -1,62 +1,59 @@
 <?php
-session_start();
-
+	session_start();
 if( isset($_SESSION['akses']) )
 {
 	header('location:'.$_SESSION['akses']);
 	exit();
 }
-
 $error = '';
 if( isset($_SESSION['error']) ) {
+$error = $_SESSION['error']; 
 
- 	$error = $_SESSION['error']; 
-
- 	unset($_SESSION['error']);
+	unset($_SESSION['error']);
 } ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
-<!-- /Added by HTTrack -->
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet">
-<link href="assets/build/styles/ltr-core.css" rel="stylesheet">
-<link href="assets/build/styles/ltr-vendor.css" rel="stylesheet">
-<link href="assets/build/styles/ltr-dashboard1.css" rel="stylesheet">
-<link href="https://panely-html.blueupcodes.com/assets/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-<title>Login</title>
-</head>
-<body class="theme-light preload-active" id="fullscreen">
-<div class="preload">
-	<div class="preload-dialog">
-		<div class="spinner-border text-primary preload-spinner"></div>
-	</div>
-</div>
-<div class="holder">
-	<div class="wrapper">
-		<div class="content">
-			<div class="container-fluid">
-				<div class="row no-gutters align-items-center justify-content-center h-100">
-					<div class="col-lg-8 col-xl-6">
-						<div class="portlet overflow-hidden">
-							<div class="row no-gutters">
-								<div class="col-md-6">
-									<div class="portlet-body d-flex flex-column justify-content-center align-items-start h-100 bg-primary text-white">
-										<h2>SELAMAT DATANG</h2>
-										<p>
-										DI SISTEM REKOMENDASI PEKERJAAN & BANTUAN BEASISWA SMK DINAMIKA PEMBANGUNAN 1 JAKARTA<BR>
-										SILAHKAN LOGIN ATAU<BR>
-										BELUM PUNYA AKUN SILAHKAH <b><U>REGISTER</U></b>
-										</p>
-										<a href="registrasi" class="btn btn-outline-light btn-lg btn-widest btn-pill">Register</a>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="portlet-body h-100">
-										<!-- <div class="d-flex justify-content-center mb-4">
-											<button class="btn btn-label-primary btn-pill"><i class="fab fa-facebook mr-2"></i> Facebook</button><button class="btn btn-label-info btn-pill mx-2"><i class="fab fa-google mr-2"></i> Google</button><button class="btn btn-label-danger btn-pill"><i class="fab fa-pinterest mr-2"></i> Pinterest</button>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet">
+		<link href="assets/build/styles/ltr-core.css" rel="stylesheet">
+		<link href="assets/build/styles/ltr-vendor.css" rel="stylesheet">
+		<link href="assets/build/styles/ltr-dashboard1.css" rel="stylesheet">
+		<link href="https://panely-html.blueupcodes.com/assets/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<title>Login</title>
+	</head>
+	<body class="theme-light preload-active" id="fullscreen">
+		<div class="preload">
+			<div class="preload-dialog">
+				<div class="spinner-border text-primary preload-spinner"></div>
+			</div>
+		</div>
+		<div class="holder">
+			<div class="wrapper">
+				<div class="content">
+					<div class="container-fluid">
+						<div class="row no-gutters align-items-center justify-content-center h-100">
+							<div class="col-lg-8 col-xl-6">
+								<div class="portlet overflow-hidden">
+									<div class="row no-gutters">
+										<div class="col-md-6">
+											<div class="portlet-body d-flex flex-column justify-content-center align-items-start h-100 bg-primary text-white">
+												<h2>SELAMAT DATANG</h2>
+												<p>
+													DI SISTEM REKOMENDASI PEKERJAAN & BANTUAN BEASISWA SMK DINAMIKA PEMBANGUNAN 1 JAKARTA<BR>
+													SILAHKAN LOGIN ATAU<BR>
+													BELUM PUNYA AKUN SILAHKAH <b><U>REGISTER</U></b>
+												</p>
+												<a href="registrasi" class="btn btn-outline-light btn-lg btn-widest btn-pill">Register</a>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="portlet-body h-100">
+												<!-- <div class="d-flex justify-content-center mb-4">
+													<button class="btn btn-label-primary btn-pill"><i class="fab fa-facebook mr-2"></i> Facebook</button><button class="btn btn-label-info btn-pill mx-2"><i class="fab fa-google mr-2"></i> Google</button><button class="btn btn-label-danger btn-pill"><i class="fab fa-pinterest mr-2"></i> Pinterest</button>
 										</div> -->
                                         <?php echo $error;?>
 										<form action="ceklogin" method="post" id="login-form">
@@ -90,6 +87,7 @@ if( isset($_SESSION['error']) ) {
 		</div>
 	</div>
 </div>
+
 <div class="sidemenu sidemenu-right sidemenu-wider" id="sidemenu-todo">
 	<div class="sidemenu-header">
 		<h3 class="sidemenu-title">May 14, 2020</h3>
@@ -162,70 +160,70 @@ if( isset($_SESSION['error']) ) {
 			<div class="portlet-body p-0">
 				<div class="rich-list rich-list-flush rich-list-action">
 					<a href="#" class="rich-list-item">
-					<div class="rich-list-prepend">
-						<div class="avatar avatar-circle">
-							<div class="avatar-addon avatar-addon-top">
-								<div class="avatar-icon avatar-icon-info">
-									<i class="fa fa-thumbtack"></i>
+						<div class="rich-list-prepend">
+							<div class="avatar avatar-circle">
+								<div class="avatar-addon avatar-addon-top">
+									<div class="avatar-icon avatar-icon-info">
+										<i class="fa fa-thumbtack"></i>
+									</div>
+								</div>
+								<div class="avatar-display">
+									<img src="https://panely-html.blueupcodes.com/assets/images/avatar/avatar-3.webp" alt="Avatar image">
+								</div>
+								<div class="avatar-addon avatar-addon-bottom">
+									<i class="marker marker-dot text-secondary"></i>
 								</div>
 							</div>
-							<div class="avatar-display">
-								<img src="https://panely-html.blueupcodes.com/assets/images/avatar/avatar-3.webp" alt="Avatar image">
-							</div>
-							<div class="avatar-addon avatar-addon-bottom">
-								<i class="marker marker-dot text-secondary"></i>
+						</div>
+						<div class="rich-list-content">
+							<h4 class="rich-list-title">Charlie Stone</h4>
+							<span class="rich-list-subtitle">Art Director</span>
+						</div>
+						<div class="rich-list-append flex-column align-items-end">
+							<span class="text-muted text-nowrap">1 min</span><span class="badge badge-success badge-pill">1</span>
+						</div>
+					</a><a href="#" class="rich-list-item">
+						<div class="rich-list-prepend">
+							<div class="avatar avatar-circle">
+								<div class="avatar-display">
+									<img src="https://panely-html.blueupcodes.com/assets/images/avatar/avatar-5.webp" alt="Avatar image">
+								</div>
+								<div class="avatar-addon avatar-addon-bottom">
+									<i class="marker marker-dot text-success"></i>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="rich-list-content">
-						<h4 class="rich-list-title">Charlie Stone</h4>
-						<span class="rich-list-subtitle">Art Director</span>
-					</div>
-					<div class="rich-list-append flex-column align-items-end">
-						<span class="text-muted text-nowrap">1 min</span><span class="badge badge-success badge-pill">1</span>
-					</div>
+						<div class="rich-list-content">
+							<h4 class="rich-list-title">Freddie Stevens</h4>
+							<span class="rich-list-subtitle">Journalist</span>
+						</div>
+						<div class="rich-list-append flex-column align-items-end">
+							<span class="text-muted text-nowrap">2 hour</span><span class="badge badge-success badge-pill">12</span>
+						</div>
 					</a><a href="#" class="rich-list-item">
-					<div class="rich-list-prepend">
-						<div class="avatar avatar-circle">
-							<div class="avatar-display">
-								<img src="https://panely-html.blueupcodes.com/assets/images/avatar/avatar-5.webp" alt="Avatar image">
-							</div>
-							<div class="avatar-addon avatar-addon-bottom">
-								<i class="marker marker-dot text-success"></i>
+						<div class="rich-list-prepend">
+							<div class="avatar avatar-circle">
+								<div class="avatar-display">
+									<img src="https://panely-html.blueupcodes.com/assets/images/avatar/avatar-2.webp" alt="Avatar image">
+								</div>
+								<div class="avatar-addon avatar-addon-bottom">
+									<i class="marker marker-dot text-success"></i>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="rich-list-content">
-						<h4 class="rich-list-title">Freddie Stevens</h4>
-						<span class="rich-list-subtitle">Journalist</span>
-					</div>
-					<div class="rich-list-append flex-column align-items-end">
-						<span class="text-muted text-nowrap">2 hour</span><span class="badge badge-success badge-pill">12</span>
-					</div>
-					</a><a href="#" class="rich-list-item">
-					<div class="rich-list-prepend">
-						<div class="avatar avatar-circle">
-							<div class="avatar-display">
-								<img src="https://panely-html.blueupcodes.com/assets/images/avatar/avatar-2.webp" alt="Avatar image">
-							</div>
-							<div class="avatar-addon avatar-addon-bottom">
-								<i class="marker marker-dot text-success"></i>
-							</div>
+						<div class="rich-list-content">
+							<h4 class="rich-list-title">Tyler Clark</h4>
+							<span class="rich-list-subtitle">Programmer</span>
 						</div>
-					</div>
-					<div class="rich-list-content">
-						<h4 class="rich-list-title">Tyler Clark</h4>
-						<span class="rich-list-subtitle">Programmer</span>
-					</div>
-					<div class="rich-list-append flex-column align-items-end">
-						<span class="text-muted text-nowrap">5 hour</span>
-					</div>
+						<div class="rich-list-append flex-column align-items-end">
+							<span class="text-muted text-nowrap">5 hour</span>
+						</div>
 					</a><a href="#" class="rich-list-item">
-					<div class="rich-list-prepend">
-						<div class="avatar avatar-circle">
-							<div class="avatar-addon avatar-addon-top">
-								<div class="avatar-icon avatar-icon-success">
-									<i class="fa fa-check"></i>
+						<div class="rich-list-prepend">
+							<div class="avatar avatar-circle">
+								<div class="avatar-addon avatar-addon-top">
+									<div class="avatar-icon avatar-icon-success">
+										<i class="fa fa-check"></i>
 								</div>
 							</div>
 							<div class="avatar-display">
@@ -243,7 +241,7 @@ if( isset($_SESSION['error']) ) {
 					<div class="rich-list-append flex-column align-items-end">
 						<span class="text-muted text-nowrap">1 day</span><span class="badge badge-success badge-pill">2</span>
 					</div>
-					</a><a href="#" class="rich-list-item">
+				</a><a href="#" class="rich-list-item">
 					<div class="rich-list-prepend">
 						<div class="avatar avatar-circle">
 							<div class="avatar-display">
@@ -261,7 +259,7 @@ if( isset($_SESSION['error']) ) {
 					<div class="rich-list-append flex-column align-items-end">
 						<span class="text-muted text-nowrap">1 day</span><span class="badge badge-success badge-pill">5</span>
 					</div>
-					</a><a href="#" class="rich-list-item">
+				</a><a href="#" class="rich-list-item">
 					<div class="rich-list-prepend">
 						<div class="avatar avatar-circle">
 							<div class="avatar-display">
@@ -279,11 +277,11 @@ if( isset($_SESSION['error']) ) {
 					<div class="rich-list-append flex-column align-items-end">
 						<span class="text-muted text-nowrap">2 day</span><span class="badge badge-success badge-pill">4</span>
 					</div>
-					</a>
-				</div>
+				</a>
 			</div>
 		</div>
 	</div>
+</div>
 </div>
 <div class="sidemenu sidemenu-right sidemenu-wider" id="sidemenu-settings">
 	<div class="sidemenu-header">
@@ -306,6 +304,7 @@ if( isset($_SESSION['error']) ) {
 						<div class="widget4-display">
 							<h6 class="widget4-subtitle">CPU Load</h6>
 						</div>
+						#
 						<div class="widget4-addon">
 							<h6 class="widget4-subtitle text-info">60%</h6>
 						</div>

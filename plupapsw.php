@@ -16,46 +16,38 @@ include_once("views/config.php");
 
 if(isset($_POST['update']))
 {	
-        $username = $_POST['username']; 
-        $password = $_POST['password'];
-        
-        
-     
-
+  $username = $_POST['username']; 
+  $password = $_POST['password'];
 	// checking empty fields
     if(empty($password)) 
     {
-
         echo '<script>
-   swal({
-    title: "Maaf!",
-    text: "Data Yang Di Input  Tidak Lengkap",
-    icon: "error",
-    button: "oke!",
-  }).then(function() {
-    window.location = "";
-  });
-            </script>';
-        
+              swal({
+              title: "Maaf!",
+              text: "Data Yang Di Input  Tidak Lengkap",
+              icon: "error",
+              button: "oke!",
+              }).then(function() {
+              window.location = "";
+              });
+              </script>';
     } 
     else 
     {	
 		//updating the table
-	    $result = mysqli_query($mysqli, "UPDATE user SET password='$password' WHERE username=$username");
-       
+    $result = mysqli_query($mysqli, "UPDATE user SET password='$password' WHERE username=$username");
         echo '<script>
-  swal({
-   title: "Good job!",
-   text: "Ubah Password User, Berhasil Di Ubah. ",
-   icon: "success",
-   button: "oke!",
- }).then(function() {
-   window.location = "./";
- });
-           </script>';
-	}
-}
+              swal({
+              title: "Good job!",
+              text: "Ubah Password User, Berhasil Di Ubah. ",
+              icon: "success",
+              button: "oke!",
+              }).then(function() {
+              window.location = "./";
+              });
+              </script>';
+    }
+  }
 ?>
-
 </body>
 </html>

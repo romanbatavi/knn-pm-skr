@@ -16,31 +16,29 @@ if( strlen($username) < 2 )
 {
 	# jika ada error dari kolom username yang kosong
 	$error = '   
-	<div class="alert alert-warning alert-dismissable" role="alert">
-                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                        <h3 class="alert-heading font-size-h5 font-w700 mb-5">Warning</h3>
-                                        <p class="mb-0">
-                                            Username Tidak Boleh Kosong <a class="alert-link" href="javascript:void(0)">link</a>!
-                                        </p>
-                                    </div>                                      
-  
+		<div class="alert alert-warning alert-dismissable" role="alert">
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+		</button>
+		<h3 class="alert-heading font-size-h5 font-w700 mb-5">Warning</h3>
+		<p class="mb-0">
+		Username Tidak Boleh Kosong <a class="alert-link" href="javascript:void(0)">link</a>!
+		</p>
+		</div>
 	';
 }else if( strlen($password) < 2 )
 {
 	# jika ada error dari kolom password yang kosong
 	$error =  '   
-	<div class="alert alert-warning alert-dismissable" role="alert">
-                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                        <h3 class="alert-heading font-size-h5 font-w700 mb-5">Warning</h3>
-                                        <p class="mb-0">
-                                            Password Tidak Boleh Kosong <a class="alert-link" href="javascript:void(0)">link</a>!
-                                        </p>
-                                    </div>                                       
-  
+		<div class="alert alert-warning alert-dismissable" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    	<span aria-hidden="true">&times;</span>
+        </button>
+        <h3 class="alert-heading font-size-h5 font-w700 mb-5">Warning</h3>
+        <p class="mb-0">
+        Password Tidak Boleh Kosong <a class="alert-link" href="javascript:void(0)">link</a>!
+        </p>
+        </div>                                       
 	';
 }else{
 	// if (md5($_POST['pin']) <> $_SESSION['image_random_value'])
@@ -89,8 +87,6 @@ if( strlen($username) < 2 )
 		$_SESSION['alamat']	   = $row['alamat'];
 		$_SESSION['no']	   = $row['no'];
 
-
-
 		if( $row['hak_akses'] == 'adminit')
 		{
 			# data hak Admin di set
@@ -115,28 +111,23 @@ if( strlen($username) < 2 )
 			$_SESSION['saya_guru']= 'TRUE';
 		}
 
-
 		# menuju halaman sesuai hak akses
 		header('location:'.$url.'/'.$_SESSION['akses'].'/');
 		exit();
 
 	}else{
-		
-		# jika data yang dimaksud tidak ada
 		$error = '   
 		<div class="alert alert-danger alert-dismissable" role="alert">
 		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
+		<span aria-hidden="true">&times;</span>
 		</button>
 		<h3 class="alert-heading font-size-h5 font-w700 mb-5">Login Gagal!!</h3>
 		<p class="mb-0">
-			Username/Password Yang Anda Masukan Salah!!</a>!
+		Username/Password Yang Anda Masukan Salah!!</a>!
 		</p>
-	</div>                                        
-      
-        ';
+		</div>                                        
+    ';
 	}
-
 }
 
 if( !empty($error) )
