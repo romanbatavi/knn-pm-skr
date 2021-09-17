@@ -47,55 +47,51 @@ function Submit(){
     $status    =  e($_POST['status']);
 
 
-    if(empty($nama_lengkap) ||
-     empty($username) || 
-     empty($angkatan) || 
-     empty($password)|| 
-     empty($nis) || 
-     empty($hak_akses) || 
-     empty($status)) {
-            echo "<script>window.alert('Data Yang Di Input  Tidak Lengkap')
-           window.location=''</script>";
-    } else {	
-        $cek = mysqli_num_rows(mysqli_query($conn,"SELECT * FROM user WHERE username  = '$username'"));
-        if ($cek > 0){
-                   echo "<script>window.alert('username Sudah Terdaftar')
-        window.location=''</script>";
-                
-          }else{	
-			$cek = mysqli_num_rows(mysqli_query($conn,"SELECT * FROM user WHERE nis  = '$nis'"));
-			if ($cek > 0){
-					   echo "<script>window.alert('nis Anda Sudah Terdaftar')
-			window.location=''</script>";
-					
-			  }else{
-       // register user if there are no errors in the form
-    if (count($errors) == 0) {
-
-        if (isset($_POST['nama_lengkap'])) {
-            $nama_lengkap = e($_POST['nama_lengkap']);
-            $query = "INSERT INTO user (nama_lengkap, 
-            username, 
-            password,
-			angkatan,
-			nis,
-            hak_akses,
-            status) 
-                      VALUES('$nama_lengkap', 
-                      '$username', 
-                      '$password',
-					  '$angkatan',
-					  '$nis', 
-                      '$hak_akses',
-                      '$status')";
-            mysqli_query($conn, $query);
-           echo "<script>window.alert('Sukses Daftar Akun')
-           window.location='./'</script>";
-        }
-            
-        }
-      }
-    }
+if(empty($nama_lengkap) ||
+	empty($username) || 
+    empty($angkatan) || 
+    empty($password)|| 
+    empty($nis) || 
+    empty($hak_akses) || 
+    empty($status)) {
+echo "<script>window.alert('Data Yang Di Input  Tidak Lengkap')
+		window.location=''</script>";
+	} else {	
+    $cek = mysqli_num_rows(mysqli_query($conn,"SELECT * FROM user WHERE username  = '$username'"));
+if ($cek > 0){
+echo "<script>window.alert('username Sudah Terdaftar')
+		window.location=''</script>";
+    }else{	
+	$cek = mysqli_num_rows(mysqli_query($conn,"SELECT * FROM user WHERE nis  = '$nis'"));
+if ($cek > 0){
+echo "<script>window.alert('nis Anda Sudah Terdaftar')
+	window.location=''</script>";
+	}else{
+// register user if there are no errors in the form
+if (count($errors) == 0) {
+if (isset($_POST['nama_lengkap'])) {
+    $nama_lengkap = e($_POST['nama_lengkap']);
+    $query = "INSERT INTO user (nama_lengkap, 
+    username, 
+    password,
+	angkatan,
+	nis,
+    hak_akses,
+    status) 
+    VALUES('$nama_lengkap', 
+            '$username', 
+            '$password',
+			'$angkatan',
+			'$nis', 
+            '$hak_akses',
+            '$status')";
+mysqli_query($conn, $query);
+echo "<script>window.alert('Sukses Daftar Akun')
+    window.location='./'</script>";
+					}        
+				}
+			}
+		}
 	}
 }
 
