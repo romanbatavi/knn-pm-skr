@@ -1,14 +1,12 @@
 <?php
 
 class aspek {
-
 	function tampil() {
 	require_once "database.php";
 	$db = new database();
 	$kon = $db->connect();
-
-  $query = $kon->query("SELECT * FROM pm_aspek");
-
+  	$query = $kon->query("SELECT * FROM pm_aspek");
+	
 	echo'
 		<table id="datatable-1" class="table table-bordered table-striped table-hover nowrap" border="2px" width="100%" cellspacing="0">
             <thead class="bg-warning text-white">
@@ -22,7 +20,7 @@ class aspek {
 					<th width="15%">Aksi</th>
 				</tr>
 			</thead>
-
+			
 			<tbody>';
 			$jmbaris = $query->num_rows;
 			if($jmbaris==0)
@@ -35,25 +33,24 @@ class aspek {
 			{
 				$no = 1;
 				while ($row = $query->fetch_array()) {
-
 				echo '
-						<tr>
-							<td style="text-align: center">'.$no.'</td>
-							<td style="text-align: center">'.$row["id_aspek"].'</td>
-							<td>'.$row["namaaspek"].'</td>
-							<td style="text-align: center">'.$row["persentase"].'</td>
-							<td style="text-align: center">'.$row["bobot_core"].'</td>
-							<td style="text-align: center">'.$row["bobot_secondary"].'</td>
-							<td class="text-center">
-								<div class="btn-group" role="group">
-									<a href="?m=editaspek&id_aspek='.$row['id_aspek'].'" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
-									<a href="?m=hapusaspek&id_aspek='.$row['id_aspek'].'" class="btn btn-danger btn-sm" onclick="return confirm ("Apakah anda yakin untuk meghapus data ini ?")" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
-								</div>
-							</td>
-						</tr>';
-								$no++;
+				<tr>
+					<td style="text-align: center">'.$no.'</td>
+					<td style="text-align: center">'.$row["id_aspek"].'</td>
+					<td>'.$row["namaaspek"].'</td>
+					<td style="text-align: center">'.$row["persentase"].'</td>
+					<td style="text-align: center">'.$row["bobot_core"].'</td>
+					<td style="text-align: center">'.$row["bobot_secondary"].'</td>
+					<td class="text-center">
+						<div class="btn-group" role="group">
+							<a href="?m=editaspek&id_aspek='.$row['id_aspek'].'" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
+							<a href="?m=hapusaspek&id_aspek='.$row['id_aspek'].'" class="btn btn-danger btn-sm" onclick="return confirm ("Apakah anda yakin untuk meghapus data ini ?")" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+						</div>
+					</td>
+				</tr>';
+				$no++;
 					}
-					echo '
+				echo '
 					</tbody>
 				</table>
 				';
