@@ -3,7 +3,6 @@
 class aspek {
 
 	function tampil() {
-
 	require_once "database.php";
 	$db = new database();
 	$kon = $db->connect();
